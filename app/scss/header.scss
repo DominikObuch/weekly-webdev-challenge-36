@@ -1,0 +1,35 @@
+@import 'fonts.scss';
+.header {
+    font-family: MaisonNeueBold;
+    display: grid;
+    grid-template-columns: 20fr 80fr 20fr;
+    grid-template-rows: 13rem;
+    &__hamburger {
+        justify-self: center;
+        align-self: center;
+
+        &,
+        &::after,
+        &::before {
+            height: 0.5rem;
+            width: 4.5rem;
+            background-color: black;
+            content: "";
+        }
+    
+        &::before {
+            margin: -1.3rem 0;
+            position: absolute;
+        }
+        &::after{
+            margin: 1.2rem 0;
+            position: absolute;
+            
+        }
+    }
+    &__heading {
+        place-self: center;
+        letter-spacing: 0.3em;
+        font-size: 4rem;
+    }
+}

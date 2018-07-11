@@ -1,0 +1,37 @@
+@font-face {
+  font-family: MaisonNeueBold;
+  src: url("../fonts/maisonneuebold.ttf") format("truetype");
+  font-weight: bold; }
+
+@font-face {
+  font-family: MaisonNeueMedium;
+  src: url("../fonts/maisonneuemedium.ttf") format("truetype");
+  font-weight: normal; }
+
+@font-face {
+  font-family: MillerDisplayItalic;
+  src: url("../fonts/Miller-Display-Italic.ttf") format("truetype"); }
+
+.header {
+  font-family: MaisonNeueBold;
+  display: grid;
+  grid-template-columns: 20fr 80fr 20fr;
+  grid-template-rows: 13rem; }
+  .header__hamburger {
+    justify-self: center;
+    align-self: center; }
+    .header__hamburger, .header__hamburger::after, .header__hamburger::before {
+      height: 0.5rem;
+      width: 4.5rem;
+      background-color: black;
+      content: ""; }
+    .header__hamburger::before {
+      margin: -1.3rem 0;
+      position: absolute; }
+    .header__hamburger::after {
+      margin: 1.2rem 0;
+      position: absolute; }
+  .header__heading {
+    place-self: center;
+    letter-spacing: 0.3em;
+    font-size: 4rem; }
