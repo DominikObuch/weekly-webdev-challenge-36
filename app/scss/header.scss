@@ -1,9 +1,43 @@
 @import 'fonts.scss';
+@import 'variables.scss';
 .header {
+    background: white;
+    z-index: 2;
     font-family: MaisonNeueBold;
     display: grid;
     grid-template-columns: 20fr 80fr 20fr;
     grid-template-rows: 13rem;
+    &__cart {
+        place-self: center;
+        transform: scale(2);
+        &-numb {
+            position: relative;
+            top: 0.0695rem;
+            right: 0.05rem;  
+            font-family: MaisonNeueMono;
+        }
+    
+        &-numb-box {
+            &::before {
+                width: 0.1rem;
+                height: 2rem;
+                position: relative;
+                content: " ";
+            }
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            bottom: -0.4rem;
+            left: 1.3rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 9999rem;
+            background: black;
+
+        }
+    }
     &__hamburger {
         justify-self: center;
         align-self: center;
@@ -16,15 +50,16 @@
             background-color: black;
             content: "";
         }
-    
+
         &::before {
             margin: -1.3rem 0;
             position: absolute;
+
         }
-        &::after{
+        &::after {
             margin: 1.2rem 0;
             position: absolute;
-            
+
         }
     }
     &__heading {

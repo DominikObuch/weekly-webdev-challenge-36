@@ -10,19 +10,16 @@ let gutil = require('gulp-util');
 let concat = require('gulp-concat');
 let babili = require('gulp-babili');
 
-
-
 gulp.task('browserSync', () => {
   browserSync.init({
-    server: {
-      baseDir: 'app'
+    server: {      baseDir: 'app'
     },
   })
 })
 
 gulp.task('sass', () => {
   return gulp.src('app/scss/main.scss')
-    .pipe(sass())
+    .pipe(sass({errLogToConsole: true})) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
