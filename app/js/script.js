@@ -1,1 +1,0 @@
-document.getElementById("sliderImage").addEventListener("click",()=>{console.log("elo")}, false);

@@ -1,0 +1,19 @@
+ .options {
+    font-family: "MaisonNeueMedium";
+    font-size: 3rem;
+    margin: 4rem 4rem 4rem 4rem;
+    display: flex;
+     justify-content: space-around;
+     
+}
+
+.categories {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.filter {
+    width: 50%;
+    text-align: right;
+}

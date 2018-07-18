@@ -1,8 +1,7 @@
 @import 'variables.scss';
-@import 'header.scss';
-@import 'slider.scss';
+@import 'components/header.scss';
+@import 'components/slider.scss';
+@import 'components/filter.scss';
 body{
     margin: 0;
-}
-html{
 }
