@@ -1,0 +1,1 @@
+window.getPseudoElements(document.querySelector(".filter__price-scope"), ':before')

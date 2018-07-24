@@ -1,19 +1,121 @@
  .options {
-    font-family: "MaisonNeueMedium";
-    font-size: 3rem;
-    margin: 4rem 4rem 4rem 4rem;
-    display: flex;
+     font-family: "MaisonNeueMedium";
+     font-size: $font-size + 0.5rem;
+     margin: 4rem 4rem 4rem 4rem;
+     display: flex;
      justify-content: space-around;
-     
-}
 
-.categories {
-    display: flex;
-    justify-content: flex-start;
-    width: 50%;
-}
+ }
 
-.filter {
-    width: 50%;
-    text-align: right;
-}
+ .categories {
+     display: flex;
+     justify-content: flex-start;
+     width: 50%;
+     &__menu {
+         margin-top: 4rem;
+         width: 80vw;
+         display: flex;
+         justify-content: flex-start;
+         border: 1px solid black;
+         position: absolute;
+         background: white;
+         font-size: $font-size + 0.2rem;
+         text-transform: uppercase;
+         padding-right: 4rem;
+     }
+     &__list {
+         margin: 2rem;
+         list-style: none;
+         li {
+             margin: 2rem 0;
+             &:first-of-type {
+                 font-size: $font-size + 0.5rem;
+                 margin-bottom: 4rem;
+                 text-transform: none;
+             }
+         }
+     }
+ }
+
+ .filter-title {
+     width: 50%;
+     text-align: right;
+ }
+
+ .filter {
+     position: absolute;
+     margin-top: 4rem;
+     width: 80vw;
+     grid-template-rows: 7rem 10rem 10rem;
+     grid-template-columns: 100%;
+     display: grid;
+     border: 1px solid black;
+     background: white;
+     font-size: $font-size - 0.2rem;
+     text-transform: uppercase;
+     padding: 0 4rem;
+     &__input {
+         width: 4rem;
+         border: 2px solid grey;
+         font-size: $font-size - 1rem;
+         font-family: "MaisonNeueMono";
+         padding: 0.5rem;
+         height: 1rem;
+         &:first-child {
+             margin-right: 1rem;
+         }
+
+     }
+     &__button {
+         background: $second-color;
+         border: none;
+         padding: 0.5rem;
+         font-size: $font-size - 0.8rem;
+         font-family: 'MaisonNeueMedium';
+         float: right;
+
+     }
+     &__price {
+         div {
+             margin: 2rem 0;
+         }
+         &-scope {
+             width: 100%;
+             border: 1px solid black;
+             &::before,
+             &:after {
+                 content: " ";
+                 transform: translateY(-50%);
+                 position: absolute;
+                 height: 2.2rem;
+                 width: 2.2rem;
+                 border: 3px solid black;
+                 border-radius: 99999rem;
+                 background: white;
+             }
+         }
+     }
+
+
+
+
+     &__header {
+         text-transform: none;
+         font-size: $font-size + 0.2rem;
+     }
+     &__color {
+         &-checkbox {
+             border-radius: 100% ;
+
+             width: 2rem;
+             height: 2rem;
+             border: none;
+             background: black;
+         }
+
+     }
+ }
+
+ .disp-none {
+     display: none;
+ }
