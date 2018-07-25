@@ -46,7 +46,7 @@
      position: absolute;
      margin-top: 4rem;
      width: 80vw;
-     grid-template-rows: 7rem 10rem 10rem;
+     grid-template-rows: 8rem 16rem 16rem 27rem 5rem;
      grid-template-columns: 100%;
      display: grid;
      border: 1px solid black;
@@ -104,15 +104,71 @@
          font-size: $font-size + 0.2rem;
      }
      &__color {
+         flex-wrap: wrap;
+         &-title{
+             padding-bottom: 2rem;
+         }
          &-checkbox {
-             border-radius: 100% ;
+             &-cont {
+                 display: flex;
 
-             width: 2rem;
-             height: 2rem;
-             border: none;
-             background: black;
+             }
+             &:first-child {
+                 margin-left: 0;
+             }
+             margin: 1rem;
+
+             border-radius: 100rem;
+             width: 3rem;
+             height: 3rem;
+
+             &-active {
+                 &:before {
+                     content: '';
+
+                 }
+             }
+             &-grey {
+                 border: 1px solid #c7c7c7;
+                 background: #c7c7c7;
+             }
+             &-white {
+                 border: 1px solid black;
+                 background: black;
+             }
+             &-red {
+                 background: #ff8b8b;
+                 border: 1px solid #ff8b8b;
+             }
+             &-blue {
+                 background: #b2e6fe;
+                 border: 1px solid #b2e6fe;
+             }
+             &-yellow {
+                 background: #fde999;
+                 border: 1px solid #fde999;
+             }
+             &-green {
+                 background: #beffc9;
+                 border: 1px solid #beffc9;
+                 
+
+             }
+
          }
 
+     }
+     &__size {
+         div {
+             &:first-child {
+                 margin-top: 5rem;
+             }
+             margin: 2.5rem 0;
+             text-transform: none;
+             color: darkslategrey;
+             font-size: $font-size - 0.5rem;
+             font-family: "MaisonNeueMono";
+         }
      }
  }
 
