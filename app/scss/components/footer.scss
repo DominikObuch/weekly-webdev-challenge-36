@@ -1,0 +1,62 @@
+.footer {
+    grid-template-rows: 20rem 10rem 10rem;
+    width: 100vw;
+    background: $second-color;
+    font-size: $font-size;
+    font-family: 'MaisonNeueMedium';
+    justify-items: center;
+    &__sub {
+        justify-items: center;
+        display: grid;
+        border-bottom: 1px solid grey;
+        padding: 5rem 0;
+        &-header {
+            padding: 3rem 0;
+            font-size: $font-size + 3.4rem;
+            font-family: "MillerDisplayItalic";
+            margin-bottom: 1rem;
+
+        }
+        &-input {
+            padding: 1.5rem;
+            border: 3px solid dimgrey;
+            line-height: 1;
+            height: 2.5rem;
+            padding-right: 10rem;
+        }
+        &-button {
+            padding: 1.5rem 3rem;
+            background: white;
+            line-height: 1;
+            transform: translateX(-15px);
+            letter-spacing: 0.4rem;
+
+            border: 3px solid black;
+            font-family: 'MaisonNeueMedium';
+
+        }
+    }
+    &__links {
+        display: grid;
+        place-content: center;
+        grid-template-rows: 15rem;
+        div{
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+.link{
+    color: black;
+    grid-row: 1;
+    font-family: 'MaisonNeueMedium';
+    text-decoration: none;
+    padding: 5rem 2rem;
+    
+}
+.social{
+    font-size: $font-size;
+    background: white;
+    padding: 5rem 3rem;
+    color: grey;
+}

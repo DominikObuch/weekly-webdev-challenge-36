@@ -24,6 +24,7 @@ gulp.task('sass', () => {
   return gulp.src('app/scss/main.scss')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(browserSync.reload({
       stream: true
     }))
