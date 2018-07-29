@@ -37,7 +37,7 @@
      }
  }
 
- .filter-title {
+ .filter__title {
      width: 50%;
      text-align: right;
  }
@@ -46,7 +46,7 @@
      position: absolute;
      margin-top: 4rem;
      width: 80vw;
-     grid-template-rows: 8rem 16rem 16rem 27rem 5rem;
+     grid-template-rows: 10rem 16rem 16rem 27rem 5rem;
      grid-template-columns: 100%;
      display: grid;
      border: 1px solid black;
@@ -100,8 +100,11 @@
 
 
      &__header {
+         align-self: center;
          text-transform: none;
+         padding-bottom: 1rem;
          font-size: $font-size + 0.2rem;
+         
      }
      &__color {
          flex-wrap: wrap;

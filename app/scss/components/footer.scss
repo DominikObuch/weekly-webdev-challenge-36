@@ -8,7 +8,8 @@
     &__sub {
         justify-items: center;
         display: grid;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px outset grey;
+        
         padding: 5rem 0;
         &-header {
             padding: 3rem 0;
@@ -19,6 +20,7 @@
         }
         &-input {
             padding: 1.5rem;
+            padding-top: 1.7rem;
             border: 3px solid dimgrey;
             line-height: 1;
             height: 2.5rem;
@@ -28,9 +30,10 @@
             padding: 1.5rem 3rem;
             background: white;
             line-height: 1;
+            padding-top: 1.7rem;
             transform: translateX(-15px);
             letter-spacing: 0.4rem;
-
+            color: rgb(25,25,25);
             border: 3px solid black;
             font-family: 'MaisonNeueMedium';
 
@@ -39,7 +42,7 @@
     &__links {
         display: grid;
         place-content: center;
-        grid-template-rows: 15rem;
+        grid-template-rows: 13rem;
         div{
             display: grid;
             place-items: center;
