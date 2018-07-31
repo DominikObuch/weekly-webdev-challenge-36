@@ -39,17 +39,17 @@ filterEl.addEventListener("click", () => {
 
 
 let slider = state => {
-
+    
     let currentImg = parseInt(document.getElementsByClassName("counter__current-img").item(0).textContent);
     let currentDot = currentImg;
     if (state == "prev") {
 
+        document.querySelector(".slider > .slider__cont, .dots").classList.add("sliderAnimationLeft");
         if (currentImg == 1) {
             currentImg = 3;
         } else {
             currentImg--;
         }
-        console.log(currentImg)
 
         if (currentDot == 1) {
             dotEl.item(--currentDot).classList.remove("dots__active");
@@ -59,6 +59,7 @@ let slider = state => {
             dotEl.item(--currentDot).classList.add("dots__active");
         }
     } else {
+        document.querySelector(".slider > .slider__cont, .dots").classList.add("sliderAnimationRight");
         if (currentImg == 3) {
             currentImg = 0;
         }
@@ -82,4 +83,15 @@ document.getElementsByClassName("slider__link")[0].addEventListener("click", () 
 
 document.getElementsByClassName("slider__image")[0].addEventListener("click", () => {
     slider("prev");
+})
+
+
+
+
+
+
+//hamburger animations 
+document.getElementsByClassName("header__hamburger").item(0).addEventListener("click", () => {
+    document.getElementsByClassName("header__hamburger-open").item(0).classList.toggle("disp-none");    
+    document.getElementsByClassName("header__hamburger-open").item(0).classList.toggle("disp-none");
 })

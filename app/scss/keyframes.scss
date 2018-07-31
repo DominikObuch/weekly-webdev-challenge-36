@@ -1,8 +1,39 @@
-@keyframes sliderMove{
+@keyframes sliderMoveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes sliderMoveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes hamburger-open {
+    0% {
+        
+  transform: translate(-100%, 0);
+    }
+    100% {
+        
+  transform: translate(0%, 0);
+    
+    }
+}
+@keyframes hamburger-close{
     0%{
-     opacity: 0;   
+        
+  transform: translate(0%, 0);
     }
     100%{
-        opacity: 1;
+        
+  transform: translate(-100%, 0);
     }
 }
