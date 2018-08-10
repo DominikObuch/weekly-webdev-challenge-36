@@ -18,22 +18,32 @@
 
 @keyframes hamburger-open {
     0% {
-        
-  transform: translate(-100%, 0);
+
+        transform: translate(-100%, 0);
     }
     100% {
-        
-  transform: translate(0%, 0);
-    
+
+        transform: translate(0%, 0);
+
     }
 }
-@keyframes hamburger-close{
-    0%{
-        
-  transform: translate(0%, 0);
+
+@keyframes hamburger-close {
+    from {
+
+        transform: translate(0%, 0);
     }
-    100%{
-        
-  transform: translate(-100%, 0);
+    to {
+        opacity: 0;
+        transform: translate(-100%, 0);
+
+    }
+}
+@keyframes changePicture{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
 }

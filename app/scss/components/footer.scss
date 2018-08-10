@@ -62,4 +62,12 @@
     background: white;
     padding: 5rem 3rem;
     color: grey;
+    a{
+        color: grey;
+    }
+    &__icon{
+        float: right;
+        letter-spacing: 2rem;
+        
+    }
 }

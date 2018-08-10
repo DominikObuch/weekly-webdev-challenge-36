@@ -9,7 +9,8 @@ let runSequence = require('run-sequence');
 let gutil = require('gulp-util');
 let concat = require('gulp-concat');
 let babili = require('gulp-babili');
-
+const { gulpSassError } = require('gulp-sass-error');
+const throwError = true;
 
 
 gulp.task('browserSync', () => {
@@ -24,7 +25,7 @@ gulp.task('sass', () => {
   return gulp.src('app/scss/main.scss')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', gulpSassError(throwError)))
     .pipe(browserSync.reload({
       stream: true
     }))

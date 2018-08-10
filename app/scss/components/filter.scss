@@ -9,10 +9,12 @@
 
  .categories {
      display: flex;
+     
      justify-content: flex-start;
      width: 50%;
      &__menu {
          margin-top: 4rem;
+         z-index: 1;
          width: 80vw;
          display: flex;
          justify-content: flex-start;
@@ -54,6 +56,10 @@
      font-size: $font-size - 0.2rem;
      text-transform: uppercase;
      padding: 0 4rem;
+
+     &__range {
+         width: 30rem;
+     }
      &__input {
          width: 4rem;
          border: 2px solid grey;
@@ -104,11 +110,11 @@
          text-transform: none;
          padding-bottom: 1rem;
          font-size: $font-size + 0.2rem;
-         
+
      }
      &__color {
          flex-wrap: wrap;
-         &-title{
+         &-title {
              padding-bottom: 2rem;
          }
          &-checkbox {
@@ -132,29 +138,29 @@
                  }
              }
              &-grey {
-                 border: 1px solid #c7c7c7;
+
                  background: #c7c7c7;
              }
              &-white {
-                 border: 1px solid black;
-                 background: black;
+                 border: 1px solid grey;
+                 background: white;
              }
              &-red {
                  background: #ff8b8b;
-                 border: 1px solid #ff8b8b;
+
              }
              &-blue {
                  background: #b2e6fe;
-                 border: 1px solid #b2e6fe;
+
              }
              &-yellow {
                  background: #fde999;
-                 border: 1px solid #fde999;
+
              }
              &-green {
                  background: #beffc9;
-                 border: 1px solid #beffc9;
-                 
+
+
 
              }
 

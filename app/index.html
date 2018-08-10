@@ -6,12 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link rel="stylesheet" href="css/multirange.css">
 </head>
 
 <body>
     <header class="header">
         <span class="header__hamburger"></span>
-        <div class="header__hamburger-open disp-none">
+        <div class="header__hamburger-inside disp-none ">
             <ul>
                 <li><a href="#">home</a></li>
                 <li><a href="#">shop</a></li>
@@ -40,7 +41,8 @@
         </div>
     </section>
     <section class="options">
-        <div class="categories">Categories<span></span>
+        <div class="categories">Categories
+            <ion-icon src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon><span></span>
             <div class="categories__menu disp-none">
                 <ul class="categories__list">
                     <li>Categories by</li>
@@ -54,11 +56,11 @@
             </div>
         </div>
         <span></span>
-        <div class="filter__title">Filter</div><span></span>
+        <div class="filter__title"><ion-icon src="svg/_ionicons_svg_ios-funnel.svg"></ion-icon>Filter<ion-icon src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon></div>
         <div class="filter disp-none">
             <div class="filter__header">Filter by</div>
             <div class="filter__price">Price
-                <div class="filter__price-scope"></div>
+                <input type="range" multiple value="10, 80" class="filter__range">
                 <div><input class="filter__input" type="number"><input class="filter__input" type="number"><button class="filter__button" type="button">Filter</button></div>
             </div>
             <div class="filter__color">
@@ -81,43 +83,50 @@
         </div>
     </section>
     <section class="offer">
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img1-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img0-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-left" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Bottle Humidifier</figcaption>
                 <div class="offer__item-price">$69.00</div>
             </div>
         </figure>
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img2-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img1-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-right" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Teapot</figcaption>
                 <div class="offer__item-price">$55.00</div>
             </div>
         </figure>
-        <figure class="offer__item offer__item--double"> <img class="offer__item-image--double" src="images/offer/img3-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item offer__item--double"> <img class="offer__item-image offer__item-image--double" src="images/offer/img2-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-right" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Align Daybed</figcaption>
                 <div class="offer__item-price">$1,999.00</div>
             </div>
         </figure>
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img4-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img3-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-left" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Beolit 15</figcaption>
                 <div class="offer__item-price">$599.00</div>
             </div>
         </figure>
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img5-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img4-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-right" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Grey Watch</figcaption>
                 <div class="offer__item-price">$215.00</div>
             </div>
         </figure>
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img6-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img5-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-left" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Bottle Humidifier</figcaption>
                 <div class="offer__item-price">$69.00</div>
             </div>
         </figure>
-        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img7-normal.png" alt="Bottle Humidifier image">
+        <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img6-normal.png" alt="Bottle Humidifier image">
+            <ion-icon class="icon__heart icon__heart-right" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
                 <figcaption>Bookends</figcaption>
                 <div class="offer__item-price">$179.00</div>
@@ -134,9 +143,19 @@
         <div class="footer__links">
             <div><a class="link" href="#">Shop</a> <a class="link" href="#">Journal</a><a class="link" href="#">About Us</a><a class="link" href="#">Contact</a></div>
         </div>
-        <div class="social"><span></span>2018 Maison</div>
+        <div class="social">&copy; 2018 Maison
+            <div class="social__icon">
+                <a href="#"><ion-icon src="svg/_ionicons_svg_logo-facebook.svg"></ion-icon></a>
+                <a href="#"><ion-icon src="svg/_ionicons_svg_logo-twitter.svg"></ion-icon></a>
+                <a href="#"><ion-icon src="svg/_ionicons_svg_logo-pinterest.svg"></ion-icon></a>
+                <a href="#"><ion-icon src="svg/_ionicons_svg_logo-youtube.svg"></ion-icon></a>
+            </div>
+        </div>
     </footer>
+
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+
 
 </body>
 
