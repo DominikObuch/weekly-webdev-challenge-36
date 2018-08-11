@@ -4,14 +4,17 @@
      margin: 4rem 4rem 4rem 4rem;
      display: flex;
      justify-content: space-around;
+     letter-spacing: 0.15rem;
 
  }
 
  .categories {
      display: flex;
-     
      justify-content: flex-start;
      width: 50%;
+     &__icon {
+         margin-top: 0.3rem;
+     }
      &__menu {
          margin-top: 4rem;
          z-index: 1;
@@ -56,9 +59,13 @@
      font-size: $font-size - 0.2rem;
      text-transform: uppercase;
      padding: 0 4rem;
-
+     &__icon {
+         position: relative;
+         top: 0.5rem;
+     }
      &__range {
          width: 30rem;
+         
      }
      &__input {
          width: 4rem;
@@ -67,6 +74,7 @@
          font-family: "MaisonNeueMono";
          padding: 0.5rem;
          height: 1rem;
+         padding-top: 0.8rem;
          &:first-child {
              margin-right: 1rem;
          }
@@ -117,7 +125,16 @@
          &-title {
              padding-bottom: 2rem;
          }
-         &-checkbox {
+         &-checkbox {             
+             margin: 1rem;
+             border-radius: 100rem;
+             width: 3rem;
+             height: 3rem;
+
+             &-active{
+                position: absolute;
+                 transform: translate(21%, 16%);
+             }
              &-cont {
                  display: flex;
 
@@ -125,18 +142,7 @@
              &:first-child {
                  margin-left: 0;
              }
-             margin: 1rem;
-
-             border-radius: 100rem;
-             width: 3rem;
-             height: 3rem;
-
-             &-active {
-                 &:before {
-                     content: '';
-
-                 }
-             }
+           
              &-grey {
 
                  background: #c7c7c7;
@@ -177,6 +183,10 @@
              color: darkslategrey;
              font-size: $font-size - 0.5rem;
              font-family: "MaisonNeueMono";
+         }
+         
+         &-active{
+             color: black !important;
          }
      }
  }

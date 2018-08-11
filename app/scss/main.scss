@@ -6,7 +6,11 @@
 @import 'components/footer.scss';
 @import 'fonts.scss';
 @import 'keyframes.scss';
-body{
-    color: rgb(35,35,35);
+body {
+    color: rgb(35, 35, 35);
     margin: 0;
+}
+
+:root {
+    --track-background: grey;
 }

@@ -1,9 +1,8 @@
-let sortState = false;
 let ctgrEl = document.getElementsByClassName("categories").item(0);
 let filterEl = document.getElementsByClassName("filter__title").item(0);
 let dotEl = document.getElementsByClassName("dots__dot");
 
-
+//changing bg for slider
 let bgChanger = (state) => {
     if (state == 2 || state == 3) {
         document.getElementsByClassName("slider").item(0).style.background = "#efefef";
@@ -17,27 +16,20 @@ let bgChanger = (state) => {
 
 
 
-
+//menu state 
 ctgrEl.addEventListener("click", () => {
-    sortState = !sortState;
     document.getElementsByClassName("categories__menu").item(0).classList.toggle("disp-none");
-    if (sortState) {
-
-        document.getElementsByClassName("filter").item(0).classList.add("disp-none");
-    }
+    document.getElementsByClassName("filter").item(0).classList.add("disp-none");
 })
 filterEl.addEventListener("click", () => {
-    if (sortState) {
-        document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
-    }
-    sortState = !sortState;
+    document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
     document.getElementsByClassName("filter").item(0).classList.toggle("disp-none");
 })
 
 
 
 
-
+//changing slider image 
 let slider = state => {
 
     let currentImg = parseInt(document.getElementsByClassName("counter__current-img").item(0).textContent);
@@ -94,20 +86,76 @@ document.getElementsByClassName("slider__image")[0].addEventListener("click", ()
 document.getElementsByClassName("header__hamburger").item(0).addEventListener("click", () => {
     let hamb = document.getElementsByClassName("header__hamburger-inside").item(0);
     hamb.classList.toggle("disp-none")
-    /* hamb.classList.toggle("header__hamburger-close");
+    hamb.classList.toggle("header__hamburger-close");
     hamb.classList.toggle("header__hamburger-open");
-    if(hamb.classList.contains("header__hamburger-close")){
-        hamb.addEventListener("animationend",hamb.classList.add("disp-none"))
-    }else{hamb.classList.remove('disp-none')}
-*/
+    if (hamb.classList.contains("header__hamburger-close")) {
+        hamb.addEventListener("animationend", hamb.classList.add("disp-none"))
+    } else {
+        hamb.classList.remove('disp-none')
+    }
+
 })
 
 
 
 
+for (let i = 0; i < document.getElementsByClassName("offer__item-image").length; i++) {
+    document.getElementsByClassName("offer__item-image").item(i).addEventListener("mouseover", function () {
+        this.src = `images/offer/img${i}-hover.png`;
+        document.getElementsByClassName("icon__heart").item(i).classList.toggle("disp-none");
+        document.getElementsByClassName("offer__item-addToCart").item(i).classList.toggle("disp-none");
+        document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
 
-//multirange.js START
-/*
+
+
+    },true)
+}
+for (let i = 0; i < document.getElementsByClassName("offer__item-image").length; i++) {
+    document.getElementsByClassName("offer__item-image").item(i).addEventListener("mouseout", function () {
+        this.src = `images/offer/img${i}-normal.png`;
+        document.getElementsByClassName("icon__heart").item(i).classList.toggle("disp-none");
+        document.getElementsByClassName("offer__item-addToCart").item(i).classList.toggle("disp-none");
+        document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
+
+
+    })
+}
+
+
+for (let i = 0; i < document.getElementsByClassName("filter__color-checkbox").length; i++) {
+    document.getElementsByClassName("filter__color-checkbox").item(i).addEventListener("click", function () {
+        for (let x = 0; x < document.getElementsByClassName("filter__color-checkbox").length; x++) {
+            document.getElementsByClassName("filter__color-checkbox").item(x).innerHTML = "";
+        }
+        let checkEl = document.createElement("ion-icon");
+        checkEl.src = "svg/_ionicons_svg_md-checkmark.svg";
+        checkEl.classList.add("filter__color-checkbox-active")
+        this.appendChild(checkEl);
+    })
+}
+
+
+let filterSizeEl = document.querySelectorAll(".filter__size > div");
+for (let i = 0; i < filterSizeEl.length; i++) {
+    filterSizeEl.item(i).addEventListener("click", function () {
+        for (let x = 0; x < filterSizeEl.length; x++) {
+            filterSizeEl.item(x).removeAttribute("class")
+        }
+        this.classList.add("filter__size-active");
+    })
+}
+
+let heartsEl = document.getElementsByClassName("icon__heart");
+for (let i = 0; i < heartsEl.length; i++) {
+    heartsEl.item(i).addEventListener("click", function () {
+        this.src="svg/_ionicons_svg_md-heart.svg";
+    },false)
+}
+
+
+
+
+// multirange START
 (function () {
     "use strict";
 
@@ -186,17 +234,17 @@ document.getElementsByClassName("header__hamburger").item(0).addEventListener("c
         }
 
         function update() {
-            document.getElementsByClassName("filter__input").item(0).placeholder = ((input.valueLow - min) + 10) * 5;
-            document.getElementsByClassName("filter__input").item(1).placeholder = (input.valueHigh - min) * 10;
             ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) + 1 + "%");
             ghost.style.setProperty("--high", 100 * ((input.valueHigh - min) / (max - min)) - 1 + "%");
+            document.getElementsByClassName("filter__input").item(0).placeholder = (input.valueLow - min) * 10;
+            document.getElementsByClassName("filter__input").item(1).placeholder = (input.valueHigh - min) * 10;
+
         }
 
         input.addEventListener("input", update);
         ghost.addEventListener("input", update);
 
         update();
-
     }
 
     multirange.init = function () {
@@ -209,18 +257,6 @@ document.getElementsByClassName("header__hamburger").item(0).addEventListener("c
         multirange.init();
     }
 
-})();*/
-//multirange.js END
+})();
 
-
-for (let i = 0; i < document.getElementsByClassName("offer__item-image").length;i++) {
-    document.getElementsByClassName("offer__item-image").item(i).addEventListener("mouseover", function () {
-            this.src = `images/offer/img${i}-hover.png`;
-        })
-    }
-for (let i = 0; i < document.getElementsByClassName("offer__item-image").length;i++) {
-    document.getElementsByClassName("offer__item-image").item(i).addEventListener("mouseout", function () {
-            this.src = `images/offer/img${i}-normal.png`;
-        })
-    }
-
+//multirange END

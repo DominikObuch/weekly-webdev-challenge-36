@@ -122,8 +122,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
     /*&:before {
             border-radius: inherit;
             
@@ -176,7 +174,7 @@
   justify-content: flex-end;
   position: relative;
   top: 12rem;
-  right: 9rem;
+  left: 5rem;
   text-decoration: none;
   font-size: 1.6rem; }
   .counter__current-img {
@@ -187,21 +185,20 @@
     font-style: italic;
     margin-right: 1rem; }
 
-.sliderAnimationRight {
-  animation-name: sliderMoveLeft;
-  animation-duration: 5s; }
-
 .options {
   font-family: "MaisonNeueMedium";
   font-size: 2.9rem;
   margin: 4rem 4rem 4rem 4rem;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  letter-spacing: 0.15rem; }
 
 .categories {
   display: flex;
   justify-content: flex-start;
   width: 50%; }
+  .categories__icon {
+    margin-top: 0.3rem; }
   .categories__menu {
     margin-top: 4rem;
     z-index: 1;
@@ -240,6 +237,9 @@
   font-size: 2.2rem;
   text-transform: uppercase;
   padding: 0 4rem; }
+  .filter__icon {
+    position: relative;
+    top: 0.5rem; }
   .filter__range {
     width: 30rem; }
   .filter__input {
@@ -248,7 +248,8 @@
     font-size: 1.4rem;
     font-family: "MaisonNeueMono";
     padding: 0.5rem;
-    height: 1rem; }
+    height: 1rem;
+    padding-top: 0.8rem; }
     .filter__input:first-child {
       margin-right: 1rem; }
   .filter__button {
@@ -286,12 +287,13 @@
       border-radius: 100rem;
       width: 3rem;
       height: 3rem; }
+      .filter__color-checkbox-active {
+        position: absolute;
+        transform: translate(21%, 16%); }
       .filter__color-checkbox-cont {
         display: flex; }
       .filter__color-checkbox:first-child {
         margin-left: 0; }
-      .filter__color-checkbox-active:before {
-        content: ''; }
       .filter__color-checkbox-grey {
         background: #c7c7c7; }
       .filter__color-checkbox-white {
@@ -313,6 +315,8 @@
     font-family: "MaisonNeueMono"; }
     .filter__size div:first-child {
       margin-top: 5rem; }
+  .filter__size-active {
+    color: black !important; }
 
 .disp-none {
   display: none; }
@@ -326,12 +330,12 @@
     place-items: center; }
     .offer__item--double {
       grid-column: 1 / 3; }
+    .offer__item-addToCart {
+      font-family: 'MaisonNeueMono';
+      color: dimgrey;
+      font-size: 2rem; }
     .offer__item-image {
-      width: 40vw;
-      animation-duration: 2s;
-      animation-name: changePicture; }
-      .offer__item-image:hover > icon__heart {
-        opacity: 1 !important; }
+      width: 40vw; }
       .offer__item-image--double {
         width: 90vw; }
     .offer__item-cont {
@@ -344,7 +348,8 @@
       word-break: keep-all; }
     .offer__item-price {
       font-family: 'MaisonNeueMono';
-      color: dimgrey; }
+      color: dimgrey;
+      font-size: 2rem; }
 
 .more {
   grid-column: 1/3;
@@ -357,8 +362,7 @@
   font-size: 2.5rem;
   position: absolute;
   z-index: 0;
-  margin-top: 2.5rem;
-  opacity: 0; }
+  margin-top: 2.5rem; }
   .icon__heart-left {
     left: 37%; }
   .icon__heart-right {
@@ -419,7 +423,8 @@
   padding: 5rem 3rem;
   color: grey; }
   .social a {
-    color: grey; }
+    color: grey;
+    text-decoration: none; }
   .social__icon {
     float: right;
     letter-spacing: 2rem; }
@@ -476,3 +481,6 @@
 body {
   color: #232323;
   margin: 0; }
+
+:root {
+  --track-background: grey; }
