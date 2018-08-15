@@ -1,0 +1,30 @@
+@media (min-width: 850px) {
+    html {
+        font-size: 62.5%;
+    }
+    .header {
+        &__cart{
+            transform: scale(1);
+        }
+        &__heading {
+            visibility: hidden;
+        }
+        &__hamburger {
+            visibility: hidden;
+            &-inside {
+                display: grid;
+                background: transparent;
+                border: none;
+
+                & ul {
+                    display: flex;
+                    & li {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

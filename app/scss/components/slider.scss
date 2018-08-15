@@ -4,7 +4,7 @@
     background-color: $second-color;
     margin: 0 auto;
     padding-bottom: 2rem;
-    
+
     /* &__image { 
         &:before {
             border-radius: inherit;
@@ -73,7 +73,7 @@
             place-self: end start;
         }
         &--second {
-            font-size: $font-size - 0.5rem;
+            font-size: $font-size - 0.3rem;
             z-index: 5;
             padding-top: 1rem;
             color: rgba(0, 0, 0, 0.702);
@@ -90,9 +90,9 @@
     display: flex;
     justify-content: center;
     &__dot {
-        border: 0.4rem solid #e5e5e5;
-        width: 1rem;
-        height: 1rem;
+        border: 0.2rem solid #e5e5e5;
+        width: 0.5rem;
+        height: 0.5rem;
         border-radius: 99999px;
     }
     &__active {
@@ -104,17 +104,17 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 12rem;
-    left: 5rem;
+    top: 7rem;
+    left: 3rem;
     text-decoration: none;
-    font-size: $font-size - 0.8rem;
+    font-size: $font-size - 0.4rem;
     &__current-img {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         text-decoration: none;
     }
     &__of {
         font-family: MillerDisplayItalic;
         font-style: italic;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
 }

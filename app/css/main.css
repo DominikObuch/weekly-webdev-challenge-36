@@ -3,33 +3,26 @@
   z-index: 2;
   font-family: MaisonNeueBold;
   display: grid;
-  grid-template-columns: 20fr 80fr 20fr;
-  grid-template-rows: 13rem; }
+  grid-template-columns: 20fr 60fr 20fr;
+  grid-template-rows: 8rem; }
   .header__cart {
     place-self: center;
-    transform: scale(2); }
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0; }
     .header__cart-numb {
-      position: relative;
-      top: 0.0695rem;
-      right: 0.05rem;
-      font-family: MaisonNeueMono; }
-    .header__cart-numb-box {
-      display: flex;
       position: absolute;
-      justify-content: center;
-      align-items: center;
       color: white;
-      bottom: -0.4rem;
-      left: 1.3rem;
       width: 1.5rem;
       height: 1.5rem;
+      right: 1.1rem;
+      top: 5.6rem;
       border-radius: 9999rem;
-      background: black; }
-      .header__cart-numb-box::before {
-        width: 0.1rem;
-        height: 2rem;
-        position: relative;
-        content: " "; }
+      background: black;
+      font-family: MaisonNeueMono;
+      padding: 0.3rem 0.4rem;
+      box-sizing: border-box; }
   .header__hamburger {
     justify-self: center;
     align-self: center;
@@ -37,7 +30,7 @@
     .header__hamburger-inside {
       box-sizing: border-box;
       width: 100vw;
-      font-size: 2.4rem;
+      font-size: 1.4rem;
       position: absolute;
       background: white;
       border: 3px solid black;
@@ -53,7 +46,10 @@
       .header__hamburger-inside ul {
         display: grid;
         place-items: center;
-        list-style: none; }
+        list-style: none;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-padding-start: 0px; }
     .header__hamburger-close {
       animation-name: hamburger-close;
       animation-duration: 1s;
@@ -64,20 +60,20 @@
       animation-timing-function: linear;
       animation-name: hamburger-open; }
     .header__hamburger, .header__hamburger::after, .header__hamburger::before {
-      height: 0.5rem;
-      width: 4.5rem;
+      height: 0.4rem;
+      width: 3.7rem;
       background-color: black;
       content: ""; }
     .header__hamburger::before {
-      margin: -1.3rem 0;
+      margin: -0.9rem 0;
       position: absolute; }
     .header__hamburger::after {
-      margin: 1.2rem 0;
+      margin: 0.9rem 0;
       position: absolute; }
   .header__heading {
     place-self: center;
     letter-spacing: 0.3em;
-    font-size: 3.9rem; }
+    font-size: 2.4rem; }
 
 .slider {
   display: grid;
@@ -147,10 +143,10 @@
             }
         }*/ }
     .slider__link--first {
-      font-size: 2.9rem;
+      font-size: 1.9rem;
       place-self: end start; }
     .slider__link--second {
-      font-size: 1.9rem;
+      font-size: 1.1rem;
       z-index: 5;
       padding-top: 1rem;
       color: rgba(0, 0, 0, 0.702); }
@@ -162,9 +158,9 @@
   display: flex;
   justify-content: center; }
   .dots__dot {
-    border: 0.4rem solid #e5e5e5;
-    width: 1rem;
-    height: 1rem;
+    border: 0.2rem solid #e5e5e5;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 99999px; }
   .dots__active {
     background: #e5e5e5; }
@@ -173,22 +169,22 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: 12rem;
-  left: 5rem;
+  top: 7rem;
+  left: 3rem;
   text-decoration: none;
-  font-size: 1.6rem; }
+  font-size: 1rem; }
   .counter__current-img {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     text-decoration: none; }
   .counter__of {
     font-family: MillerDisplayItalic;
     font-style: italic;
-    margin-right: 1rem; }
+    margin-right: 0.5rem; }
 
 .options {
   font-family: "MaisonNeueMedium";
-  font-size: 2.9rem;
-  margin: 4rem 4rem 4rem 4rem;
+  font-size: 1.9rem;
+  margin: 2rem 2.5rem 0.5rem;
   display: flex;
   justify-content: space-around;
   letter-spacing: 0.15rem; }
@@ -198,26 +194,27 @@
   justify-content: flex-start;
   width: 50%; }
   .categories__icon {
-    margin-top: 0.3rem; }
+    margin-top: 0.1rem; }
   .categories__menu {
     margin-top: 4rem;
     z-index: 1;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     justify-content: flex-start;
     border: 1px solid black;
     position: absolute;
     background: white;
-    font-size: 2.6rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    padding-right: 4rem; }
+    left: 0;
+    box-sizing: border-box; }
   .categories__list {
     margin: 2rem;
     list-style: none; }
     .categories__list li {
       margin: 2rem 0; }
       .categories__list li:first-of-type {
-        font-size: 2.9rem;
+        font-size: 1.9rem;
         margin-bottom: 4rem;
         text-transform: none; }
 
@@ -228,27 +225,27 @@
 .filter {
   position: absolute;
   margin-top: 4rem;
-  width: 80vw;
-  grid-template-rows: 10rem 16rem 16rem 27rem 5rem;
+  width: 74.6%;
+  grid-template-rows: 8rem 13rem 8rem 15rem 5rem;
   grid-template-columns: 100%;
   display: grid;
   border: 1px solid black;
   background: white;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   padding: 0 4rem; }
   .filter__icon {
     position: relative;
-    top: 0.5rem; }
+    top: 0.3rem; }
   .filter__range {
-    width: 30rem; }
+    width: 25rem; }
   .filter__input {
-    width: 4rem;
+    width: 3.5rem;
     border: 2px solid grey;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: "MaisonNeueMono";
     padding: 0.5rem;
-    height: 1rem;
+    height: 0.7rem;
     padding-top: 0.8rem; }
     .filter__input:first-child {
       margin-right: 1rem; }
@@ -256,7 +253,8 @@
     background: #f5f5f5;
     border: none;
     padding: 0.5rem;
-    font-size: 1.6rem;
+    padding-top: 0.7rem;
+    font-size: 1.2rem;
     font-family: 'MaisonNeueMedium';
     float: right; }
   .filter__price div {
@@ -277,19 +275,19 @@
     align-self: center;
     text-transform: none;
     padding-bottom: 1rem;
-    font-size: 2.6rem; }
+    font-size: 1.6rem; }
   .filter__color {
     flex-wrap: wrap; }
     .filter__color-title {
       padding-bottom: 2rem; }
     .filter__color-checkbox {
-      margin: 1rem;
-      border-radius: 100rem;
-      width: 3rem;
-      height: 3rem; }
+      border-radius: 999999px;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem; }
       .filter__color-checkbox-active {
         position: absolute;
-        transform: translate(21%, 16%); }
+        transform: translate(35%, 35%); }
       .filter__color-checkbox-cont {
         display: flex; }
       .filter__color-checkbox:first-child {
@@ -311,10 +309,10 @@
     margin: 2.5rem 0;
     text-transform: none;
     color: darkslategrey;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     font-family: "MaisonNeueMono"; }
     .filter__size div:first-child {
-      margin-top: 5rem; }
+      margin-top: 2rem; }
   .filter__size-active {
     color: black !important; }
 
@@ -324,42 +322,52 @@
 .offer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 39rem) 16rem; }
+  grid-template-rows: repeat(4, 22rem) 8rem; }
   .offer__item {
     display: grid;
-    place-items: center; }
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px; }
     .offer__item--double {
       grid-column: 1 / 3; }
     .offer__item-addToCart {
       font-family: 'MaisonNeueMono';
       color: dimgrey;
-      font-size: 2rem; }
+      font-size: 1rem;
+      transform: translateY(-6px);
+      align-self: center; }
+      .offer__item-addToCart img {
+        transform: translateY(3px);
+        width: 1.7rem;
+        margin-right: 0.4rem; }
     .offer__item-image {
-      width: 40vw; }
+      width: 37vw;
+      place-self: center; }
       .offer__item-image--double {
-        width: 90vw; }
+        width: 87vw; }
     .offer__item-cont {
       display: grid;
-      justify-self: start;
-      margin: 4rem 1rem;
+      margin: 0rem 2.5rem;
       font-family: "MaisonNeueMedium";
-      font-size: 2.4rem;
-      line-height: 3.5rem;
-      word-break: keep-all; }
+      font-size: 1.4rem;
+      word-break: keep-all;
+      align-items: center; }
     .offer__item-price {
       font-family: 'MaisonNeueMono';
       color: dimgrey;
-      font-size: 2rem; }
+      align-self: start;
+      font-size: 1rem; }
 
 .more {
   grid-column: 1/3;
   place-self: center;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   text-decoration: underline;
   font-family: 'MaisonNeueMedium'; }
 
 .icon__heart {
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: absolute;
   z-index: 0;
   margin-top: 2.5rem; }
@@ -369,43 +377,40 @@
     left: 87%; }
 
 .footer {
-  grid-template-rows: 20rem 10rem 10rem;
+  grid-template-rows: 10rem 10rem 10rem;
   width: 100vw;
   background: #f5f5f5;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   font-family: 'MaisonNeueMedium';
   justify-items: center; }
   .footer__sub {
     justify-items: center;
     display: grid;
     border-bottom: 1px outset grey;
-    padding: 5rem 0; }
+    padding: 3rem 0 5rem 0; }
     .footer__sub-header {
-      padding: 3rem 0;
-      font-size: 5.8rem;
+      padding: 1rem 0;
+      font-size: 3rem;
       font-family: "MillerDisplayItalic";
       margin-bottom: 1rem; }
     .footer__sub-input {
-      padding: 1.5rem;
-      padding-top: 1.7rem;
+      padding: 0.6rem 1.5rem;
       border: 3px solid dimgrey;
       line-height: 1;
       height: 2.5rem;
-      padding-right: 10rem; }
+      width: 50vw; }
     .footer__sub-button {
-      padding: 1.5rem 3rem;
+      transform: translateX(-10px);
+      padding: 1.06rem 1.8rem;
       background: white;
-      line-height: 1;
-      padding-top: 1.7rem;
-      transform: translateX(-15px);
-      letter-spacing: 0.4rem;
+      letter-spacing: 0.1rem;
       color: #191919;
       border: 3px solid black;
       font-family: 'MaisonNeueMedium'; }
   .footer__links {
     display: grid;
     place-content: center;
-    grid-template-rows: 13rem; }
+    grid-template-rows: 8rem; }
     .footer__links div {
       display: grid;
       place-items: center; }
@@ -415,19 +420,40 @@
   grid-row: 1;
   font-family: 'MaisonNeueMedium';
   text-decoration: none;
-  padding: 5rem 2rem; }
+  padding: 1rem 1.5rem;
+  word-break: keep-all; }
 
 .social {
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   background: white;
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
   color: grey; }
   .social a {
     color: grey;
     text-decoration: none; }
   .social__icon {
+    font-size: 1.9rem;
     float: right;
+    transform: translateY(-4px);
     letter-spacing: 2rem; }
+
+@media (min-width: 850px) {
+  html {
+    font-size: 62.5%; }
+  .header__cart {
+    transform: scale(1); }
+  .header__heading {
+    visibility: hidden; }
+  .header__hamburger {
+    visibility: hidden; }
+    .header__hamburger-inside {
+      display: grid;
+      background: transparent;
+      border: none; }
+      .header__hamburger-inside ul {
+        display: flex; }
+        .header__hamburger-inside ul li {
+          margin-right: 1rem; } }
 
 @font-face {
   font-family: MaisonNeueBold;
@@ -478,9 +504,34 @@
   to {
     opacity: 0; } }
 
+@keyframes fadeIn {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s; }
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.5s; }
+
 body {
   color: #232323;
   margin: 0; }
 
-:root {
-  --track-background: grey; }
+html {
+  font-size: 62.5%; }
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0px; }

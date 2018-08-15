@@ -7,7 +7,7 @@ let bgChanger = (state) => {
     if (state == 2 || state == 3) {
         document.getElementsByClassName("slider").item(0).style.background = "#efefef";
 
-        document.getElementById("sliderImage").style.paddingLeft = "7rem";
+        document.getElementById("sliderImage").style.paddingLeft = "2rem";
     } else {
         document.getElementsByClassName("slider").item(0).style.background = "#f5f5f5";
         document.getElementById("sliderImage").style.paddingLeft = "0";
@@ -107,7 +107,6 @@ for (let i = 0; i < document.getElementsByClassName("offer__item-image").length;
         document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
 
 
-
     },true)
 }
 for (let i = 0; i < document.getElementsByClassName("offer__item-image").length; i++) {
@@ -116,9 +115,8 @@ for (let i = 0; i < document.getElementsByClassName("offer__item-image").length;
         document.getElementsByClassName("icon__heart").item(i).classList.toggle("disp-none");
         document.getElementsByClassName("offer__item-addToCart").item(i).classList.toggle("disp-none");
         document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
-
-
-    })
+        
+    }, true)
 }
 
 

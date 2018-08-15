@@ -1,5 +1,5 @@
 .footer {
-    grid-template-rows: 20rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem 10rem;
     width: 100vw;
     background: $second-color;
     font-size: $font-size;
@@ -9,40 +9,36 @@
         justify-items: center;
         display: grid;
         border-bottom: 1px outset grey;
-        
-        padding: 5rem 0;
+        padding: 3rem 0 5rem 0;
         &-header {
-            padding: 3rem 0;
-            font-size: $font-size + 3.4rem;
+            padding: 1rem 0;
+            font-size: $font-size + 1.6rem;
             font-family: "MillerDisplayItalic";
             margin-bottom: 1rem;
 
         }
         &-input {
-            padding: 1.5rem;
-            padding-top: 1.7rem;
+            padding: 0.6rem 1.5rem;
             border: 3px solid dimgrey;
             line-height: 1;
             height: 2.5rem;
-            padding-right: 10rem;
+            width: 50vw;
         }
         &-button {
-            padding: 1.5rem 3rem;
+            transform: translateX(-10px);
+            padding: 1.06rem 1.8rem;
             background: white;
-            line-height: 1;
-            padding-top: 1.7rem;
-            transform: translateX(-15px);
-            letter-spacing: 0.4rem;
+            letter-spacing: 0.1rem;
             color: rgb(25,25,25);
             border: 3px solid black;
             font-family: 'MaisonNeueMedium';
-
+            
         }
     }
     &__links {
         display: grid;
         place-content: center;
-        grid-template-rows: 13rem;
+        grid-template-rows: 8rem;
         div{
             display: grid;
             place-items: center;
@@ -54,20 +50,23 @@
     grid-row: 1;
     font-family: 'MaisonNeueMedium';
     text-decoration: none;
-    padding: 5rem 2rem;
+    padding: 1rem 1.5rem;
+    word-break: keep-all;
     
 }
 .social{
     font-size: $font-size;
     background: white;
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
     color: grey;
     a{
         color: grey;
         text-decoration: none;
     }
     &__icon{
+        font-size: $font-size + 0.5rem;
         float: right;
+        transform: translateY(-4px);
         letter-spacing: 2rem;
         
     }
