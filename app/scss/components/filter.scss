@@ -44,15 +44,14 @@
      }
  }
 
- .filter__title {
-     width: 50%;
-     text-align: right;
- }
+ .filter__menu {
 
- .filter {
+     text-align: left;
+     justify-items: start;
+     left:0;
      position: absolute;
      margin-top: 4rem;
-     width: 74.6%;
+     width: 74%;
      grid-template-rows: 8rem 13rem 8rem 15rem 5rem;
      grid-template-columns: 100%;
      display: grid;
@@ -61,6 +60,14 @@
      font-size: $font-size - 0.2rem;
      text-transform: uppercase;
      padding: 0 4rem;
+     
+     
+     
+ }
+
+ .filter {
+     width: 50%;
+     text-align: right;
      &__icon {
          position: relative;
          top: 0.3rem;

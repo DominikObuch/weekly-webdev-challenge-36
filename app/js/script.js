@@ -1,5 +1,5 @@
 let ctgrEl = document.getElementsByClassName("categories").item(0);
-let filterEl = document.getElementsByClassName("filter__title").item(0);
+let filterEl = document.getElementsByClassName("filter").item(0);
 let dotEl = document.getElementsByClassName("dots__dot");
 
 //changing bg for slider
@@ -19,11 +19,11 @@ let bgChanger = (state) => {
 //menu state 
 ctgrEl.addEventListener("click", () => {
     document.getElementsByClassName("categories__menu").item(0).classList.toggle("disp-none");
-    document.getElementsByClassName("filter").item(0).classList.add("disp-none");
+    document.getElementsByClassName("filter__menu").item(0).classList.add("disp-none");
 })
 filterEl.addEventListener("click", () => {
     document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
-    document.getElementsByClassName("filter").item(0).classList.toggle("disp-none");
+    document.getElementsByClassName("filter__menu").item(0).classList.toggle("disp-none");
 })
 
 

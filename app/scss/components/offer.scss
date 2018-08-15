@@ -4,7 +4,7 @@
     grid-template-rows: repeat(4, 22rem) 8rem;
     &__item {
         display: grid;
-
+        box-sizing: border-box;
         -webkit-margin-before: 0em;
         -webkit-margin-after: 0em;
         -webkit-margin-start: 0px;

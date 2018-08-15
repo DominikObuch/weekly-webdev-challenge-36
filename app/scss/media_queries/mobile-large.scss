@@ -1,0 +1,32 @@
+@media (min-width:425px){
+    
+    .offer{
+        grid-template-rows: repeat(4, 60vw) 9rem;
+        
+    }
+}
+@media(min-width:490px){
+    .categories{
+        transform: translateX(20px);
+        
+    }
+    .slider{
+        &__link--first{
+            font-size: $font-size + 1.5rem;
+        }
+        &__link--second{
+            font-size: $font-size + 0.5rem;
+        }
+        &__image{
+
+            position: relative;
+            height: 27rem;
+            left: 10%;
+            img{height: 23rem;}
+        }
+    }
+    .filter__title{
+        width: 40%;
+        transform: translateX(-30px);
+    }
+}

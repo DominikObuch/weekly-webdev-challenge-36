@@ -3,6 +3,10 @@
         font-size: 62.5%;
     }
     .header {
+        &__logo{
+            display: flex;
+            position: absolute;
+        }
         &__cart{
             transform: scale(1);
         }
@@ -10,7 +14,7 @@
             visibility: hidden;
         }
         &__hamburger {
-            visibility: hidden;
+            display: none;
             &-inside {
                 display: grid;
                 background: transparent;
@@ -18,6 +22,7 @@
 
                 & ul {
                     display: flex;
+                    justify-content: flex-end;
                     & li {
                         margin-right: 1rem;
                     }
