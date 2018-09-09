@@ -7,19 +7,18 @@
     grid-template-rows: 8rem;
     &__cart {
         place-self: center;
-        -webkit-margin-before: 0;
-        -webkit-margin-after: 0;
-        -webkit-margin-start: 0;
-        -webkit-margin-end: 0;
-
-
+        position: absolute;
+        top: 20px;
+        right: 6vw;
         &-numb {
+            &-box {
+            }
+            top: 65%;
+            right: -0.5vw;
             position: absolute;
             color: white;
             width: 1.5rem;
             height: 1.5rem;
-            right: 1.1rem;
-            top: 5.6rem;
             border-radius: 9999rem;
             background: black;
             font-family: MaisonNeueMono;
@@ -53,24 +52,7 @@
                 display: grid;
                 place-items: center;
                 list-style: none;
-                -webkit-margin-before: 0em;
-                -webkit-margin-after: 0em;
-                -webkit-padding-start: 0px;
-
             }
-        }
-        &-close {
-            animation-name: hamburger-close;
-            animation-duration: 1s;
-            animation-timing-function: ease-in;
-            animation-iteration-count: 1;
-
-        }
-        &-open {
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-name: hamburger-open;
-
         }
 
         &,

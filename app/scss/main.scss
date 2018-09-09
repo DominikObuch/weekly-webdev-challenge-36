@@ -1,13 +1,20 @@
+//other
 @import 'variables.scss';
+@import 'fonts.scss';
+@import 'keyframes.scss';
+
+//components
 @import 'components/header.scss';
 @import 'components/slider.scss';
 @import 'components/filter.scss';
 @import 'components/offer.scss';
 @import 'components/footer.scss';
+
+//media queries
 @import 'media_queries/mobile-large.scss';
+@import 'media_queries/tablets.scss';
 @import 'media_queries/laptops.scss';
-@import 'fonts.scss';
-@import 'keyframes.scss';
+
 body {
     color: rgb(35, 35, 35);
     margin: 0;
@@ -20,4 +27,12 @@ ul{
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-padding-start: 0px;
+}
+figure{
+
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+
 }

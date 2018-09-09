@@ -31,6 +31,11 @@ gulp.task('sass', () => {
     }))
 });
 
+gulp.task('scss-lint', function() {
+    return gulp.src('app/scss/*.scss')
+        .pipe(scsslint())
+        .pipe(scsslint.failReporter('E'))
+});
 
 gulp.task('fonts', () => {
   return gulp.src('app/fonts/**/*')

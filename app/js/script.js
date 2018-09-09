@@ -1,6 +1,6 @@
-let ctgrEl = document.getElementsByClassName("categories").item(0);
-let filterEl = document.getElementsByClassName("filter").item(0);
-let dotEl = document.getElementsByClassName("dots__dot");
+const ctgrEl = document.getElementsByClassName("categories").item(0);
+const filterEl = document.getElementsByClassName("filter").item(0);
+const dotEl = document.getElementsByClassName("dots__dot");
 
 //changing bg for slider
 let bgChanger = (state) => {
@@ -17,14 +17,40 @@ let bgChanger = (state) => {
 
 
 //menu state 
-ctgrEl.addEventListener("click", () => {
-    document.getElementsByClassName("categories__menu").item(0).classList.toggle("disp-none");
-    document.getElementsByClassName("filter__menu").item(0).classList.add("disp-none");
+ctgrActive = false;
+window.addEventListener("click", () =>{
+    console.log(event.target)
+    if(ctgrActive && !(event.target.className.substr(0,10)=="categories")){
+        document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
+        console.log('elo')
+        
+    }
+
 })
-filterEl.addEventListener("click", () => {
+ctgrEl.addEventListener("click", () => {
+    document.getElementsByClassName("filter__menu").item(0).classList.add("disp-none");
+    
+
+    console.log(ctgrActive);
+    if (event.target.className.substr(0, 11) == "categories_" &&  !(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none")) ) {
+        console.log("ta")
+    } else {
+        console.log(event.target)
+        document.getElementsByClassName("categories__menu").item(0).classList.toggle("disp-none");
+        if(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none")){
+           ctgrActive = false;
+           }
+           else {
+           ctgrActive = true;
+           }
+    }
+
+})
+filterEl.addEventListener("click", e => {
     document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
     document.getElementsByClassName("filter__menu").item(0).classList.toggle("disp-none");
-})
+    
+}, false)
 
 
 
@@ -107,19 +133,30 @@ for (let i = 0; i < document.getElementsByClassName("offer__item-image").length;
         document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
 
 
-    },true)
+    }, true)
 }
-for (let i = 0; i < document.getElementsByClassName("offer__item-image").length; i++) {
+for (let i = 0; i <= document.getElementsByClassName("offer__item-image").length - 1; i++) {
+
     document.getElementsByClassName("offer__item-image").item(i).addEventListener("mouseout", function () {
         this.src = `images/offer/img${i}-normal.png`;
         document.getElementsByClassName("icon__heart").item(i).classList.toggle("disp-none");
         document.getElementsByClassName("offer__item-addToCart").item(i).classList.toggle("disp-none");
         document.getElementsByClassName("offer__item-price").item(i).classList.toggle("disp-none");
-        
+
     }, true)
 }
 
+for (let i = 1; i < document.querySelectorAll(".categories li").length - 1; i++) {
+    document.querySelectorAll(".categories li").item(i).addEventListener("click", function () {
+        for (let x = 1; x < document.querySelectorAll(".categories li").length - 1; x++) {
+            document.getElementsByClassName("categories__point").item(x).classList.remove("categories__active");
+        }
+        this.classList.add("categories__active");
+    })
+}
 
+
+//color checkbox 
 for (let i = 0; i < document.getElementsByClassName("filter__color-checkbox").length; i++) {
     document.getElementsByClassName("filter__color-checkbox").item(i).addEventListener("click", function () {
         for (let x = 0; x < document.getElementsByClassName("filter__color-checkbox").length; x++) {
@@ -146,8 +183,8 @@ for (let i = 0; i < filterSizeEl.length; i++) {
 let heartsEl = document.getElementsByClassName("icon__heart");
 for (let i = 0; i < heartsEl.length; i++) {
     heartsEl.item(i).addEventListener("click", function () {
-        this.src="svg/_ionicons_svg_md-heart.svg";
-    },false)
+        this.src = "svg/_ionicons_svg_md-heart.svg";
+    }, false)
 }
 
 

@@ -1,21 +1,3 @@
-@keyframes sliderMoveLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
-@keyframes sliderMoveRight {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100vw);
-    }
-}
-
 @keyframes hamburger-open {
     0% {
 
@@ -38,37 +20,4 @@
         transform: translate(-100%, 0);
 
     }
-}
-@keyframes changePicture{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-@keyframes fadeIn{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-
-@keyframes fadeOut{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.fadeIn{
-    animation-name: fadeIn;
-    animation-duration: 0.5s;
-}
-.fadeOut{
-    animation-name: fadeOut;
-    animation-duration: 0.5s;
 }

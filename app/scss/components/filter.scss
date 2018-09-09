@@ -10,11 +10,13 @@
 
  .categories {
      display: flex;
-     justify-content: flex-start;
+     justify-contens: flex-start;
      width: 50%;
+
      &__icon {
          margin-top: 0.1rem;
      }
+
      &__menu {
          margin-top: 4rem;
          z-index: 1;
@@ -26,21 +28,28 @@
          background: white;
          font-size: $font-size + 0.2rem;
          text-transform: uppercase;
-         left:0;
+         left: 0;
          box-sizing: border-box;
-         
+
      }
+
      &__list {
          margin: 2rem;
          list-style: none;
-         li {
-             margin: 2rem 0;
-             &:first-of-type {
-                 font-size: $font-size + 0.5rem;
-                 margin-bottom: 4rem;
-                 text-transform: none;
-             }
+     }
+     &__point {
+         color: grey;
+         margin: 2rem 0;
+
+         &:first-of-type {
+             color: black;
+             font-size: $font-size + 0.5rem;
+             margin-bottom: 4rem;
+             text-transform: none;
          }
+     }
+     &__active {
+         color: black;
      }
  }
 
@@ -48,7 +57,7 @@
 
      text-align: left;
      justify-items: start;
-     left:0;
+     left: 0;
      position: absolute;
      margin-top: 4rem;
      width: 74%;
@@ -60,22 +69,25 @@
      font-size: $font-size - 0.2rem;
      text-transform: uppercase;
      padding: 0 4rem;
-     
-     
-     
+
+
+
  }
 
  .filter {
      width: 50%;
      text-align: right;
+
      &__icon {
          position: relative;
          top: 0.3rem;
      }
+
      &__range {
          width: 25rem;
-         
+
      }
+
      &__input {
          width: 3.5rem;
          border: 2px solid grey;
@@ -84,11 +96,13 @@
          padding: 0.5rem;
          height: 0.7rem;
          padding-top: 0.8rem;
+
          &:first-child {
              margin-right: 1rem;
          }
 
      }
+
      &__button {
          background: $second-color;
          border: none;
@@ -99,13 +113,16 @@
          float: right;
 
      }
+
      &__price {
          div {
              margin: 2rem 0;
          }
+
          &-scope {
              width: 100%;
              border: 1px solid black;
+
              &::before,
              &:after {
                  content: " ";
@@ -130,72 +147,79 @@
          font-size: $font-size + 0.2rem;
 
      }
+
      &__color {
          flex-wrap: wrap;
+
          &-title {
              padding-bottom: 2rem;
          }
-         &-checkbox {             
+
+         &-checkbox {
              border-radius: 999999px;
              width: 2rem;
              height: 2rem;
              margin-right: 1rem;
 
-             &-active{
-                position: absolute;
+             &-active {
+                 position: absolute;
                  transform: translate(35%, 35%);
              }
+
              &-cont {
                  display: flex;
 
              }
+
              &:first-child {
                  margin-left: 0;
              }
-           
+
              &-grey {
 
                  background: #c7c7c7;
              }
+
              &-white {
                  border: 1px solid grey;
                  background: white;
              }
+
              &-red {
                  background: #ff8b8b;
 
              }
+
              &-blue {
                  background: #b2e6fe;
 
              }
+
              &-yellow {
                  background: #fde999;
 
              }
+
              &-green {
                  background: #beffc9;
-
-
-
              }
-
          }
-
      }
+
      &__size {
          div {
              &:first-child {
                  margin-top: 2rem;
              }
+
              margin: 2.5rem 0;
              text-transform: none;
              color: darkslategrey;
              font-size: $font-size - 0.3rem;
              font-family: "MaisonNeueMono";
          }
-         
-         &-active{
+
+         &-active {
              color: black !important;
          }
      }

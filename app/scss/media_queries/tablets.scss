@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px) {
+    .offer__item-cont {
+        margin: 0 5rem;
+    }
+
+    .offer {
+        &__item {
+            &-cont {
+                margin: 0 5rem;
+            }
+        }
+    }
+    .categories{
+        &__menu{
+            width: 70%;
+            margin: 60px -30% ;
+        }
+    }
+    .filter {
+
+        &__menu {
+            justify-items: left;
+            font-size: $font-size + .4rem;
+            width: 40%;
+            margin: 0 46%;
+        }
+
+        &__header {
+            font-size: $font-size + .9rem;
+        }
+
+        &__color {
+            font-size: $font-size - .2rem;
+
+            &-title {
+                font-size: $font-size + .4rem;
+            }
+        }
+    }
+}

@@ -12,6 +12,7 @@
     }
 
     input[type="range"].multirange.original::-webkit-slider-thumb {
+
         position: relative;
         z-index: 2;
         box-shadow: 0.4px 0.4px 0px #000000, 0px 0px 0.4px #0d0d0d;
@@ -19,6 +20,7 @@
         height: 26px;
         width: 25px;
         border-radius: 50px;
+        border: 2px solid black;
     }
 
     input[type="range"].multirange.original::-moz-range-thumb {
@@ -49,6 +51,7 @@
 
     input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
         background: var(--track-background);
+        
 
     }
 

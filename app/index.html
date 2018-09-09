@@ -16,8 +16,8 @@
     <!--HEADER START-->
     <header class="header">
         <span class="header__hamburger"></span>
-        <img class="header__logo disp-none" src="images/logo.png" alt="logo">
-        <img class="header__logo disp-none" src="images/logo.png" alt="logo">
+        <img class="header__logo header__logo--first disp-none" src="images/logo.png" alt="logo">
+        <img class="header__logo header__logo--second disp-none" src="images/logo.png" alt="logo">
         <div class="header__hamburger-inside disp-none header__hamburger-close ">
             <ul>
                 <li><a href="#">home</a></li>
@@ -36,6 +36,7 @@
 
     <!--SLIDER START-->
     <section class="slider">
+       <ion-icon class="disp-none slider__arrow slider__arrow-back" src="svg/_ionicons_svg_ios-arrow-back.svg"></ion-icon>
         <figure class="slider__cont">
             <div class="slider__image"><img id="sliderImage" height="174" src="images/slider_1.png" alt="slider image"></div>
             <figcaption class="slider__link"><span class="slider__link--first">Sky Planet</span> <span href="#" class="slider__link--second"><a href="#">Shop now</a>
@@ -49,6 +50,7 @@
             <span class="dots__dot"></span>
             <span class="dots__dot"></span>
         </div>
+        <ion-icon src="svg/_ionicons_svg_ios-arrow-forward.svg" class="disp-none slider__arrow slider__arrow-forward"></ion-icon>
     </section>
     <!--SLIDER END-->
 
@@ -60,13 +62,13 @@
             <ion-icon class="categories__icon" src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon><span></span>
             <div class="categories__menu disp-none">
                 <ul class="categories__list">
-                    <li>Categories by</li>
-                    <li>living</li>
-                    <li>furniture</li>
-                    <li>lightning</li>
-                    <li>dining</li>
-                    <li>accessories</li>
-                    <li>technics</li>
+                    <li class="categories__point ">Categories by</li>
+                    <li class="categories__point categories__active">living</li>
+                    <li class="categories__point ">furniture</li>
+                    <li class="categories__point ">lightning</li>
+                    <li class="categories__point ">dining</li>
+                    <li class="categories__point ">accessories</li>
+                    <li class="categories__point ">technics</li>
                 </ul>
             </div>
         </div>
