@@ -47,6 +47,9 @@
         }
     }
     .slider {
+        &__side{
+            height: 65%;
+        }
         &__link--first {
             font-size: $font-size + 1.5rem;
         }

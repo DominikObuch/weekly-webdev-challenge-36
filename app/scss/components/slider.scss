@@ -31,6 +31,19 @@
             }
         } 
     }*/
+    &__side{
+        position: absolute;
+        width: 50vw;
+        height: 35%;
+        z-index: 100000;
+        
+        &--left{
+            left: 0;
+        }
+        &--right{
+            right: 0;
+        }
+    }
     &__cont {
         display: grid;
         grid-template-columns: 50fr 60fr;

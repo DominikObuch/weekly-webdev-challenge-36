@@ -2,106 +2,46 @@ const ctgrEl = document.getElementsByClassName("categories").item(0);
 const filterEl = document.getElementsByClassName("filter").item(0);
 const dotEl = document.getElementsByClassName("dots__dot");
 
-//changing bg for slider
-let bgChanger = (state) => {
-    if (state == 2 || state == 3) {
-        document.getElementsByClassName("slider").item(0).style.background = "#efefef";
-
-        document.getElementById("sliderImage").style.paddingLeft = "2rem";
-    } else {
-        document.getElementsByClassName("slider").item(0).style.background = "#f5f5f5";
-        document.getElementById("sliderImage").style.paddingLeft = "0";
-    }
-}
 
 
 
 //menu state 
 ctgrActive = false;
-window.addEventListener("click", () =>{
+window.addEventListener("click", () => {
     console.log(event.target)
-    if(ctgrActive && !(event.target.className.substr(0,10)=="categories")){
+    if (ctgrActive && !(event.target.className.substr(0, 10) == "categories")) {
         document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
         console.log('elo')
-        
+
     }
 
 })
 ctgrEl.addEventListener("click", () => {
     document.getElementsByClassName("filter__menu").item(0).classList.add("disp-none");
-    
+
 
     console.log(ctgrActive);
-    if (event.target.className.substr(0, 11) == "categories_" &&  !(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none")) ) {
+    if (event.target.className.substr(0, 11) == "categories_" && !(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none"))) {
         console.log("ta")
     } else {
         console.log(event.target)
         document.getElementsByClassName("categories__menu").item(0).classList.toggle("disp-none");
-        if(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none")){
-           ctgrActive = false;
-           }
-           else {
-           ctgrActive = true;
-           }
+        if (document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none")) {
+            ctgrActive = false;
+        } else {
+            ctgrActive = true;
+        }
     }
 
 })
 filterEl.addEventListener("click", e => {
     document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
     document.getElementsByClassName("filter__menu").item(0).classList.toggle("disp-none");
-    
+
 }, false)
 
 
 
-
-//changing slider image 
-let slider = state => {
-
-    let currentImg = parseInt(document.getElementsByClassName("counter__current-img").item(0).textContent);
-    let currentDot = currentImg;
-    if (state == "prev") {
-
-        document.querySelector(".slider > .slider__cont, .dots").classList.add("sliderAnimationLeft");
-        if (currentImg == 1) {
-            currentImg = 3;
-        } else {
-            currentImg--;
-        }
-
-        if (currentDot == 1) {
-            dotEl.item(--currentDot).classList.remove("dots__active");
-            dotEl.item(currentDot = 2).classList.add("dots__active");
-        } else {
-            dotEl.item(--currentDot).classList.remove("dots__active");
-            dotEl.item(--currentDot).classList.add("dots__active");
-        }
-    } else {
-        document.querySelector(".slider > .slider__cont, .dots").classList.add("sliderAnimationRight");
-        if (currentImg == 3) {
-            currentImg = 0;
-        }
-        if (currentDot == 3) {
-            dotEl.item(--currentDot).classList.remove("dots__active");
-            dotEl.item(currentDot = 0).classList.add("dots__active");
-        } else {
-            dotEl.item(--currentDot).classList.remove("dots__active");
-            dotEl.item(++currentDot).classList.add("dots__active");
-        }
-        ++currentImg;
-    }
-    document.getElementById("sliderImage").src = `images/slider_${currentImg}.png`
-    bgChanger(currentImg);
-    document.getElementsByClassName("counter__current-img").item(0).textContent = currentImg;
-}
-
-document.getElementsByClassName("slider__link")[0].addEventListener("click", () => {
-    slider("next");
-})
-
-document.getElementsByClassName("slider__image")[0].addEventListener("click", () => {
-    slider("prev");
-})
 
 
 
@@ -186,9 +126,6 @@ for (let i = 0; i < heartsEl.length; i++) {
         this.src = "svg/_ionicons_svg_md-heart.svg";
     }, false)
 }
-
-
-
 
 // multirange START
 (function () {
@@ -295,3 +232,68 @@ for (let i = 0; i < heartsEl.length; i++) {
 })();
 
 //multirange END
+
+
+
+// slider start
+
+
+let slider = state => {
+
+    let currentImg = parseInt(document.getElementsByClassName("counter__current-img").item(0).textContent);
+    let currentDot = currentImg;
+    if (state == "prev") {
+
+        for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
+
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationLeft");
+        }
+
+        if (currentImg == 1) {
+            currentImg = 3;
+        } else {
+            currentImg--;
+        }
+
+        if (currentDot == 1) {
+            dotEl.item(--currentDot).classList.remove("dots__active");
+            dotEl.item(currentDot = 2).classList.add("dots__active");
+        } else {
+            dotEl.item(--currentDot).classList.remove("dots__active");
+            dotEl.item(--currentDot).classList.add("dots__active");
+        }
+    } else {
+        for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationRight");
+        }
+        if (currentImg == 3) {
+            currentImg = 0;
+        }
+        if (currentDot == 3) {
+            dotEl.item(--currentDot).classList.remove("dots__active");
+            dotEl.item(currentDot = 0).classList.add("dots__active");
+        } else {
+            dotEl.item(--currentDot).classList.remove("dots__active");
+            dotEl.item(++currentDot).classList.add("dots__active");
+        }
+        ++currentImg;
+    }
+    document.querySelector(".slider > .slider__cont, .dots").addEventListener("animationend", () => {
+        document.getElementById("sliderImage").src = `images/slider_${currentImg}.png`;
+
+        for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.remove("sliderAnimationRight");
+        }
+    })
+
+
+    document.getElementsByClassName("counter__current-img").item(0).textContent = currentImg;
+}
+
+document.getElementById("slider-right").addEventListener("click", () => {
+    slider("next");
+})
+
+document.getElementById("slider-left").addEventListener("click", () => {
+    slider("prev");
+})

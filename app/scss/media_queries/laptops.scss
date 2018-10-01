@@ -73,7 +73,6 @@
     }
 
     .slider {
-       
         &__image {
             img {
                 height: 45rem;
@@ -83,26 +82,263 @@
                 z-index: 100;
             }
         }
-        &__arrow{
+
+        &__arrow {
             display: block;
             position: absolute;
             font-size: 3rem;
             top: 26rem;
-            &-back{
-            left: 1rem;
+
+            &-back {
+                left: 6rem;
             }
-            &-forward{
-                right: 1rem;
+
+            &-forward {
+                right: 6rem;
             }
-            
+
+        }
+    }
+
+    .options {
+        display: grid;
+        position: absolute;
+        grid-template-rows: 20vw 50vw;
+        grid-template-columns: 50rem;
+        justify-content: left;
+        width: 40%;
+        margin-left: 5vw;
+        margin-top: -2rem;
+
+        ion-icon {
+            display: none;
+        }
+    }
+
+    .categories {
+
+        display: grid;
+        grid-template-rows: 0;
+        font-size: $desktop-font-size + 0.64vw;
+        margin-top: 6.5rem;
+
+        &__list {
+            position: relative;
+            bottom: 1rem;
+        }
+
+        &__menu {
+            border: none;
+            font-size: $desktop-font-size + 0.14vw;
+            text-transform: none;
+            position: static;
+            height: 92%;
+            width: 108%;
+            border-bottom: 1px solid grey;
+            display: grid;
+            margin: 0;
+
+
+
+            li {
+                margin-left: -15%;
+
+                &:first-child {
+                    word-break: keep-all;
+                    display: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .filter {
+        visibility: hidden;
+        margin-top: 4rem;
+        
+        &__color {
+            &-title {
+                padding-bottom: 0.8rem;
+            }
+
+            &-checkbox {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &__header {
+            font-size: $desktop-font-size + 0.64vw;
+        }
+
+        &__size {
+            font-size: $desktop-font-size + 0.3vw;
+
+            div {
+                font-size: $desktop-font-size + 0.14vw;
+                margin: 1.6rem 0;
+                color: grey;
+                font-family: "MaisonNeueMedium";
+            }
+        }
+
+        &__menu {
+            text-transform: none;
+            visibility: visible;
+            width: 25rem;
+            display: grid;
+            position: static;
+            padding: 0;
+            border: none;
+            margin: 0 2rem;
+        }
+
+        &__found {
+            display: none;
+        }
+
+        &__desktop {
+            text-transform: none;
+            display: grid;
+            transform: translateY(-2rem);
+
+            &--tags {
+                .filter__desktop--header {
+                    font-size: 2.2rem;
+
+                }
+            }
+
+            &--brands {
+                border-bottom: 1px solid grey;
+            }
+
+            &--header {
+                margin: 0;
+                font-size: $desktop-font-size + 0.3vw;
+                font-family: "MaisonNeueMedium";
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                font-weight: normal;
+            }
+
+            &--content {
+                margin: 0;
+                font-size: $desktop-font-size + 0.14vw;
+                color: grey;
+                list-style: none;
+                padding: 0;
+                line-height: 2.5rem;
+
+                li {
+                    margin: 1.6rem 0;
+                }
+            }
+        }
+
+        &__input {
+            width: 4rem;
+            padding-right: 0;
+        }
+    }
+
+    .offer {
+        padding-top: 5rem;
+        display: grid;
+        margin-left: 42rem;
+        margin-right: 6rem;
+        grid-template-rows: 1rem repeat(3, 30vw) 9rem;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3vw 2vw;
+
+
+
+        &__sorting {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            grid-column: 1/3;
+            position: relative;
+            bottom: 1rem;
+            font-family: "MaisonNeueMedium";
+            font-size: $desktop-font-size + 0.14vw;
+
+            &--icon {
+                position: relative;
+                top: 0.5rem;
+            }
+
+            &--sortBy {
+                margin-left: 1rem;
+            }
+
+            &--results {
+                justify-self: end;
+                font-size: $desktop-font-size;
+                margin-top: 0.3rem;
+                color: grey;
+                margin-right: 1.5rem
+            }
+        }
+
+        &__item {
+            &-image {
+                width: 100%;
+            }
+
+            &--double {
+                display: none;
+            }
+
+            &-cont {
+                background: $second-color;
+                position: relative;
+                padding: 1.5rem 5rem;
+                width: 30vw;
+                place-self: center;
+                bottom: 8rem;
+                display: none;
+                box-sizing: border-box;
+
+
+                figcaption {
+                    white-space: nowrap;
+                }
+
+
+
+            }
+
         }
     }
 
     .counter {
-        top: 15rem;
-        left: 10rem;
+        top: 44rem;
+        left: 0;
+        right: 8rem;
+        position: absolute;
+
+        &__of {
+            bottom: 0.3rem;
+            position: relative;
+        }
     }
-    .dots{
+
+    .dots {
         visibility: hidden;
     }
+
 }
+
+/*
+
+@media (min-width:1270px){
+    .offer{
+        grid-row-gap: 2.5vw;
+    }
+}
+@media (min-width: 1350px){
+    .offer{
+        grid-row-gap: 5vw;}
+}*/
+

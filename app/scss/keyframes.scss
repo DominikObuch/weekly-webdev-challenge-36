@@ -3,6 +3,7 @@
 
         transform: translate(-100%, 0);
     }
+
     100% {
 
         transform: translate(0%, 0);
@@ -15,9 +16,37 @@
 
         transform: translate(0%, 0);
     }
+
     to {
         opacity: 0;
         transform: translate(-100%, 0);
 
     }
+}
+
+@keyframes sliderAnimationLeft {
+    from {
+        transform: translateX(50%);
+    }
+
+    to {
+
+        transform: translateX(100%);
+    }
+}
+
+@keyframes sliderAnimationRight {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.sliderAnimationRight {
+    animation-name: sliderAnimationRight;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
 }

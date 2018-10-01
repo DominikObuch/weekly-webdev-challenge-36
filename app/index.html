@@ -36,12 +36,14 @@
 
     <!--SLIDER START-->
     <section class="slider">
-       <ion-icon class="disp-none slider__arrow slider__arrow-back" src="svg/_ionicons_svg_ios-arrow-back.svg"></ion-icon>
+       <div class=" slider__side slider__side--left" id="slider-left"></div>
+       <div class=" slider__side slider__side--right" id="slider-right"></div>
+        <ion-icon class="disp-none slider__arrow slider__arrow-back" src="svg/_ionicons_svg_ios-arrow-back.svg"></ion-icon>
         <figure class="slider__cont">
             <div class="slider__image"><img id="sliderImage" height="174" src="images/slider_1.png" alt="slider image"></div>
             <figcaption class="slider__link"><span class="slider__link--first">Sky Planet</span> <span href="#" class="slider__link--second"><a href="#">Shop now</a>
-               <div class="counter"><span class="counter__current-img">1 </span><span class="counter__of">of</span> 3<span></span>
-                </div>
+                    <div class="counter"><span class="counter__current-img">1 </span><span class="counter__of">of</span> 3<span></span>
+                    </div>
                 </span>
             </figcaption>
         </figure>
@@ -59,16 +61,16 @@
     <section class="options">
         <!-- CATEGORIES START-->
         <div class="categories">Categories
-            <ion-icon class="categories__icon" src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon><span></span>
+            <ion-icon class="categories__icon" src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon>
             <div class="categories__menu disp-none">
                 <ul class="categories__list">
                     <li class="categories__point ">Categories by</li>
-                    <li class="categories__point categories__active">living</li>
-                    <li class="categories__point ">furniture</li>
-                    <li class="categories__point ">lightning</li>
-                    <li class="categories__point ">dining</li>
-                    <li class="categories__point ">accessories</li>
-                    <li class="categories__point ">technics</li>
+                    <li class="categories__point categories__active">Living</li>
+                    <li class="categories__point ">Furniture</li>
+                    <li class="categories__point ">Lightning</li>
+                    <li class="categories__point ">Dining</li>
+                    <li class="categories__point ">Accessories</li>
+                    <li class="categories__point ">Technics</li>
                 </ul>
             </div>
         </div>
@@ -87,7 +89,7 @@
                     <div><input class="filter__input" type="number"><input class="filter__input" type="number"><button class="filter__button" type="button">Filter</button></div>
                 </div>
                 <div class="filter__color">
-                    <div class="filter__color-title">color</div>
+                    <div class="filter__color-title">Color</div>
                     <div class="filter__color-checkbox-cont">
                         <div class="filter__color-checkbox filter__color-checkbox-grey">
                             <ion-icon src="svg/_ionicons_svg_md-checkmark.svg" class="filter__color-checkbox-active"></ion-icon>
@@ -104,7 +106,27 @@
                     <div class="filter__size-active">Medium<sup>12</sup></div>
                     <div>Large<sup>18</sup></div>
                 </div>
-                <div>16 Products Found</div>
+                <div class="filter__desktop disp-none">
+                    <div class="filter__desktop--brands">
+                        <h5 class="filter__desktop--header">Brands</h5>
+                        <ol class="filter__desktop--content">
+                            <li>Branshu Hamono<sup>02</sup></li>
+                            <li>Bowner<sup>07</sup></li>
+                            <li>Braun<sup>10</sup></li>
+                            <li>Elevenplus<sup>09</sup></li>
+                            <li>Field<sup>01</sup></li>
+                            <li>Henry Wilson<sup>12</sup></li>
+                            <li>Menu<sup>14</sup></li>
+                        </ol>
+                    </div>
+                    <div class="filter__desktop--tags">
+                        <h5 class="filter__desktop--header">Popular tags</h5>
+                        <div class="filter__desktop--content">
+                            Simple, Minimalism, Furniture, White, Black, Accessories
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__found">16 Products Found</div>
             </div>
         </div>
         <!-- FILTER START-->
@@ -114,6 +136,11 @@
 
     <!--OFFER START-->
     <section class="offer">
+        <div class="offer__sorting disp-none">
+            <div class="offer__sorting--sortBy">Sort by: A-Z <ion-icon class="offer__sorting--icon" src="svg/_ionicons_svg_md-arrow-dropdown.svg"></ion-icon>
+            </div>
+            <div class="offer__sorting--results">Showing 1-12 of 24 results</div>
+        </div>
         <figure class="offer__item"> <img class="offer__item-image" src="images/offer/img0-normal.png" alt="Bottle Humidifier image">
             <ion-icon class="icon__heart icon__heart-left disp-none" src="svg/_ionicons_svg_md-heart-empty.svg"></ion-icon>
             <div class="offer__item-cont">
