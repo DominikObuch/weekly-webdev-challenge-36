@@ -817,11 +817,11 @@
     grid-row-gap: 5vw; } }
 
 @media (min-width: 1450px) {
+  .header__cart {
+    right: 5rem; }
   .offer {
     margin-left: 46vw;
-    grid-gap: 4vw; }
-    .offer__item-image {
-      width: 80%; } }
+    grid-gap: 4vw; } }
 
 body {
   color: #232323;

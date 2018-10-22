@@ -5,15 +5,20 @@
     <title>Weekly webdev challenge 36</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link rel="stylesheet" href="css/multirange.css">
+    
+    <!-- build:css css/main.css -->
+
+    <link href="css/multirange.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- endbuild -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
     <!--HEADER START-->
+    
     <header class="header">
         <span class="header__hamburger"></span>
         <img class="header__logo header__logo--first disp-none" src="images/logo.png" alt="logo">
@@ -229,9 +234,13 @@
         </div>
     </footer>
 
-    <!--FOOTER END-->
-    <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+    <!--FOOTER END-->
+        
+    <!-- build:js js/script.min.js -->
+
+    <script type="text/javascript" src="js/script.js"></script> 
+    <!-- endbuild -->
 
 
 </body>
