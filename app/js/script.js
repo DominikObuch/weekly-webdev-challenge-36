@@ -11,7 +11,7 @@ window.addEventListener("click", () => {
     console.log(event.target)
     if (ctgrActive && !(event.target.className.substr(0, 10) == "categories")) {
         document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
-        console.log('elo')
+
 
     }
 
@@ -20,7 +20,6 @@ ctgrEl.addEventListener("click", () => {
     document.getElementsByClassName("filter__menu").item(0).classList.add("disp-none");
 
 
-    console.log(ctgrActive);
     if (event.target.className.substr(0, 11) == "categories_" && !(document.getElementsByClassName("categories__menu").item(0).classList.contains("disp-none"))) {
         console.log("ta")
     } else {
@@ -34,12 +33,16 @@ ctgrEl.addEventListener("click", () => {
     }
 
 })
+
 filterEl.addEventListener("click", e => {
     document.getElementsByClassName("categories__menu").item(0).classList.add("disp-none");
     document.getElementsByClassName("filter__menu").item(0).classList.toggle("disp-none");
+    event.stopPropagation();
 
 }, false)
-
+document.getElementsByClassName("filter__menu").item(0).addEventListener("click", () => {
+    event.stopPropagation()
+})
 
 
 
@@ -86,9 +89,9 @@ for (let i = 0; i <= document.getElementsByClassName("offer__item-image").length
     }, true)
 }
 
-for (let i = 1; i < document.querySelectorAll(".categories li").length - 1; i++) {
+for (let i = 1; i <= document.querySelectorAll(".categories li").length - 1; i++) {
     document.querySelectorAll(".categories li").item(i).addEventListener("click", function () {
-        for (let x = 1; x < document.querySelectorAll(".categories li").length - 1; x++) {
+        for (let x = 1; x <= document.querySelectorAll(".categories li").length - 1; x++) {
             document.getElementsByClassName("categories__point").item(x).classList.remove("categories__active");
         }
         this.classList.add("categories__active");
@@ -246,7 +249,7 @@ let slider = state => {
 
         for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
 
-            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationLeft");
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationFadeOut");
         }
 
         if (currentImg == 1) {
@@ -262,9 +265,11 @@ let slider = state => {
             dotEl.item(--currentDot).classList.remove("dots__active");
             dotEl.item(--currentDot).classList.add("dots__active");
         }
+        console.log(currentDot)
+        console.log(currentImg)
     } else {
         for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
-            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationRight");
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.add("sliderAnimationFadeOut");
         }
         if (currentImg == 3) {
             currentImg = 0;
@@ -282,7 +287,7 @@ let slider = state => {
         document.getElementById("sliderImage").src = `images/slider_${currentImg}.png`;
 
         for (let i = 0; i < document.querySelectorAll(".slider > .slider__cont, .dots").length; i++) {
-            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.remove("sliderAnimationRight");
+            document.querySelectorAll(".slider > .slider__cont, .dots")[i].classList.remove("sliderAnimationFadeOut");
         }
     })
 
@@ -297,3 +302,24 @@ document.getElementById("slider-right").addEventListener("click", () => {
 document.getElementById("slider-left").addEventListener("click", () => {
     slider("prev");
 })
+// brand 
+for (let i = 0; i < document.querySelectorAll(".filter__desktop--content li").length; i++) {
+    document.querySelectorAll(".filter__desktop--content li")[i].addEventListener("click",function(){
+        for(let x = 0; x < document.querySelectorAll(".filter__desktop--content li").length; x++){
+            
+            document.querySelectorAll(".filter__desktop--content li")[x].classList.remove("filter__desktop--point-active");
+            
+        }
+        this.classList.add("filter__desktop--point-active");
+    })
+}
+for (let i = 0; i < document.querySelectorAll(".filter__desktop--content span").length; i++) {
+    document.querySelectorAll(".filter__desktop--content span")[i].addEventListener("click",function(){
+        for(let x = 0; x < document.querySelectorAll(".filter__desktop--content span").length; x++){
+
+            document.querySelectorAll(".filter__desktop--content span")[x].classList.remove("filter__desktop--point-active");
+
+        }
+        this.classList.add("filter__desktop--point-active");
+    })
+}

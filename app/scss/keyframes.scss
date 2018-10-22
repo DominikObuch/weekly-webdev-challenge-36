@@ -35,18 +35,16 @@
     }
 }
 
-@keyframes sliderAnimationRight {
+@keyframes sliderAnimationFadeOut {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
-
-.sliderAnimationRight {
-    animation-name: sliderAnimationRight;
-    animation-duration: 0.4s;
+.sliderAnimationFadeOut {
+    animation-name: sliderAnimationFadeOut;
+    animation-duration: 0.6s;
     animation-timing-function: ease-in;
 }

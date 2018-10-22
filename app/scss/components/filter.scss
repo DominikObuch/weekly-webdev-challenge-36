@@ -36,7 +36,9 @@
          margin: 2rem;
          list-style: none;
      }
+
      &__point {
+         cursor: pointer;
          color: grey;
          margin: 2rem 0;
 
@@ -47,6 +49,7 @@
              text-transform: none;
          }
      }
+
      &__active {
          color: black;
      }
@@ -84,10 +87,11 @@
 
      &__range {
          width: 25rem;
-
+         cursor: pointer;
      }
 
      &__input {
+         cursor: pointer;
          width: 3.5rem;
          border: 2px solid grey;
          font-size: $font-size - 0.2rem;
@@ -103,6 +107,7 @@
      }
 
      &__button {
+         cursor: pointer;
          background: $second-color;
          border: none;
          padding: 0.5rem;
@@ -155,6 +160,7 @@
          }
 
          &-checkbox {
+             cursor: pointer;
              border-radius: 999999px;
              width: 2rem;
              height: 2rem;
@@ -206,6 +212,7 @@
      }
 
      &__size {
+         cursor: pointer;
          div {
              &:first-child {
                  margin-top: 2rem;

@@ -35,15 +35,15 @@
   to {
     transform: translateX(100%); } }
 
-@keyframes sliderAnimationRight {
+@keyframes sliderAnimationFadeOut {
   from {
     opacity: 1; }
   to {
     opacity: 0; } }
 
-.sliderAnimationRight {
-  animation-name: sliderAnimationRight;
-  animation-duration: 0.4s;
+.sliderAnimationFadeOut {
+  animation-name: sliderAnimationFadeOut;
+  animation-duration: 0.6s;
   animation-timing-function: ease-in; }
 
 .header {
@@ -116,6 +116,7 @@
   background-color: #f5f5f5;
   margin: 0 auto;
   padding-bottom: 2rem;
+  height: 20rem;
   /* &__image { 
         &:before {
             border-radius: inherit;
@@ -145,7 +146,7 @@
   .slider__side {
     position: absolute;
     width: 50vw;
-    height: 35%;
+    height: 20rem;
     z-index: 100000; }
     .slider__side--left {
       left: 0; }
@@ -255,6 +256,7 @@
     margin: 2rem;
     list-style: none; }
   .categories__point {
+    cursor: pointer;
     color: grey;
     margin: 2rem 0; }
     .categories__point:first-of-type {
@@ -288,8 +290,10 @@
     position: relative;
     top: 0.3rem; }
   .filter__range {
-    width: 25rem; }
+    width: 25rem;
+    cursor: pointer; }
   .filter__input {
+    cursor: pointer;
     width: 3.5rem;
     border: 2px solid grey;
     font-size: 1.2rem;
@@ -300,6 +304,7 @@
     .filter__input:first-child {
       margin-right: 1rem; }
   .filter__button {
+    cursor: pointer;
     background: #f5f5f5;
     border: none;
     padding: 0.5rem;
@@ -331,6 +336,7 @@
     .filter__color-title {
       padding-bottom: 2rem; }
     .filter__color-checkbox {
+      cursor: pointer;
       border-radius: 999999px;
       width: 2rem;
       height: 2rem;
@@ -355,16 +361,18 @@
         background: #fde999; }
       .filter__color-checkbox-green {
         background: #beffc9; }
-  .filter__size div {
-    margin: 2.5rem 0;
-    text-transform: none;
-    color: darkslategrey;
-    font-size: 1.1rem;
-    font-family: "MaisonNeueMono"; }
-    .filter__size div:first-child {
-      margin-top: 2rem; }
-  .filter__size-active {
-    color: black !important; }
+  .filter__size {
+    cursor: pointer; }
+    .filter__size div {
+      margin: 2.5rem 0;
+      text-transform: none;
+      color: darkslategrey;
+      font-size: 1.1rem;
+      font-family: "MaisonNeueMono"; }
+      .filter__size div:first-child {
+        margin-top: 2rem; }
+    .filter__size-active {
+      color: black !important; }
 
 .disp-none {
   display: none; }
@@ -516,18 +524,20 @@
     font-size: 2.2rem; }
   .offer__item-price {
     font-size: 1.8rem; }
-  .slider__side {
-    height: 65%; }
-  .slider__link--first {
-    font-size: 2.9rem; }
-  .slider__link--second {
-    font-size: 1.9rem; }
-  .slider__image {
-    position: relative;
-    height: 35rem;
-    left: 10%; }
-    .slider__image img {
-      height: 29rem; }
+  .slider {
+    height: 40rem; }
+    .slider__side {
+      height: 40rem; }
+    .slider__link--first {
+      font-size: 2.9rem; }
+    .slider__link--second {
+      font-size: 1.9rem; }
+    .slider__image {
+      position: relative;
+      height: 35rem;
+      left: 10%; }
+      .slider__image img {
+        height: 29rem; }
   .filter__menu {
     width: 50%;
     margin-left: 27%; }
@@ -580,8 +590,8 @@
   html {
     font-size: 62.5%; }
   .header {
+    z-index: -1;
     background: #f5f5f5;
-    /*rgb(239, 239,239) */
     align-items: center;
     height: 10rem;
     box-sizing: border-box;
@@ -677,6 +687,10 @@
     .filter__color-checkbox {
       width: 3rem;
       height: 3rem; }
+      .filter__color-checkbox ion-icon {
+        display: inline-block;
+        font-size: 2.5rem;
+        transform: translate(11%, 12%); }
     .filter__header {
       font-size: 1.64vw; }
     .filter__size {
@@ -701,9 +715,12 @@
       text-transform: none;
       display: grid;
       transform: translateY(-2rem); }
+      .filter__desktop--point-active {
+        color: black; }
       .filter__desktop--tags .filter__desktop--header {
         font-size: 2.2rem; }
       .filter__desktop--brands {
+        cursor: pointer;
         border-bottom: 1px solid grey; }
       .filter__desktop--header {
         margin: 0;
@@ -719,7 +736,10 @@
         list-style: none;
         padding: 0;
         line-height: 2.5rem; }
+        .filter__desktop--content span {
+          cursor: pointer; }
         .filter__desktop--content li {
+          cursor: pointer;
           margin: 1.6rem 0; }
     .filter__input {
       width: 4rem;
@@ -727,10 +747,10 @@
   .offer {
     padding-top: 5rem;
     display: grid;
-    margin-left: 42rem;
+    margin-left: 33vw;
     margin-right: 6rem;
-    grid-template-rows: 1rem repeat(3, 30vw) 9rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1rem repeat(3, 30rem) 9rem;
+    grid-template-columns: 30rem 30rem;
     grid-gap: 3vw 2vw; }
     .offer__sorting {
       display: grid;
@@ -739,6 +759,7 @@
       grid-column: 1/3;
       position: relative;
       bottom: 1rem;
+      margin-left: 3.5rem;
       font-family: "MaisonNeueMedium";
       font-size: 1.14vw; }
       .offer__sorting--icon {
@@ -753,17 +774,17 @@
         color: grey;
         margin-right: 1.5rem; }
     .offer__item-image {
-      width: 100%; }
+      width: 25rem; }
     .offer__item--double {
       display: none; }
     .offer__item-cont {
       background: #f5f5f5;
       position: relative;
       padding: 1.5rem 5rem;
-      width: 30vw;
+      margin-top: 4rem;
+      width: 25rem;
       place-self: center;
       bottom: 8rem;
-      display: none;
       box-sizing: border-box; }
       .offer__item-cont figcaption {
         white-space: nowrap; }
@@ -776,19 +797,32 @@
       bottom: 0.3rem;
       position: relative; }
   .dots {
-    visibility: hidden; } }
+    visibility: hidden; }
+  .icon__heart {
+    position: absolute;
+    right: unset;
+    margin-left: 7rem;
+    left: unset;
+    font-size: 4rem;
+    top: unset; } }
 
-/*
+@media (min-width: 1270px) {
+  .offer {
+    margin-left: 35vw;
+    grid-row-gap: 2.5vw; } }
 
-@media (min-width:1270px){
-    .offer{
-        grid-row-gap: 2.5vw;
-    }
-}
-@media (min-width: 1350px){
-    .offer{
-        grid-row-gap: 5vw;}
-}*/
+@media (min-width: 1350px) {
+  .offer {
+    margin-left: 40vw;
+    grid-row-gap: 5vw; } }
+
+@media (min-width: 1450px) {
+  .offer {
+    margin-left: 46vw;
+    grid-gap: 4vw; }
+    .offer__item-image {
+      width: 80%; } }
+
 body {
   color: #232323;
   margin: 0; }

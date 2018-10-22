@@ -10,101 +10,127 @@
 @media(min-width:490px) {
     .header {
         padding: 1rem 0;
-        &__cart{
+
+        &__cart {
             top: 30px;
         }
+
         &__heading {
             font-size: $font-size + 2rem;
         }
     }
+
     .categories {
         transform: translateX(20px);
+
         &__menu {
             width: 100%;
             transform: translateY(11%);
         }
 
     }
+
     .options {
         font-size: $font-size + 1.4rem;
         margin: 3.5rem 2.5rem 1rem;
     }
+
     .offer {
         &__item {
-            &-addToCart{
+            &-addToCart {
                 font-size: $font-size;
-                img{
+
+                img {
                     width: 2.3em;
                 }
             }
+
             &-cont {
                 margin: 0 4rem;
                 font-size: $font-size + 0.8rem;
             }
+
             &-price {
                 font-size: $font-size + 0.4rem;
             }
         }
     }
+
     .slider {
-        &__side{
-            height: 65%;
+        height: $slider-height + 20rem;
+
+        &__side {
+            height: $slider-height +20rem;
         }
+
         &__link--first {
             font-size: $font-size + 1.5rem;
         }
+
         &__link--second {
             font-size: $font-size + 0.5rem;
         }
+
         &__image {
 
             position: relative;
             height: 35rem;
             left: 10%;
+
             img {
                 height: 29rem;
             }
         }
     }
+
     .filter {
         &__menu {
             width: 50%;
             margin-left: 27%;
         }
     }
+
     .more {
         font-size: $font-size + 0.5rem;
     }
+
     .counter {
-        font-size: $font-size ;
+        font-size: $font-size;
         top: 10rem;
     }
+
     .social {
         font-size: $font-size + 0.5rem;
-        &__icon a{
+
+        &__icon a {
             font-size: $font-size + 0.7rem;
         }
     }
-    .dots__dot{
+
+    .dots__dot {
         width: 1.5rem;
         height: 1.5rem;
-        border: 0.4rem solid #e5e5e5 ;
+        border: 0.4rem solid #e5e5e5;
     }
+
     .footer {
         &__sub {
             &-header {
                 font-size: $font-size + 3.5rem;
                 margin-bottom: 3rem;
             }
-            &-button{
+
+            &-button {
                 box-sizing: content-box;
                 height: 2.5rem;
                 padding: 1rem 1.8rem;
             }
+
             &-input {
                 padding: 1rem 1.5rem;
             }
         }
+
         font-size: $font-size + 0.5rem;
     }
 }
