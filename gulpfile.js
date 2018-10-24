@@ -48,6 +48,15 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
+gulp.task('images', () => {
+    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+        .pipe(gulp.dest('dist/images'))
+});
+gulp.task('svg', ()=>{
+    return gulp.src('app/svg/**/*.svg')
+    .pipe(gulp.dest('dist/svg'))
+});
+
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
@@ -57,7 +66,7 @@ gulp.task('useref', () => {
 
 gulp.task('scripts', () => {
   return gulp.src(['app/js/*.js'])
-    .pipe(concat('main.min.js'))
+    .pipe(concat('script.min.js'))
     .pipe(babili({
       mangle: {
         keepClassNames: true
@@ -80,6 +89,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', ['default', 'fonts'], 'useref', 'scripts',
+  runSequence('clean:dist', ['default', 'fonts', 'images', 'svg'], 'useref', 'scripts',
     callback)
 })

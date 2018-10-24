@@ -5,20 +5,21 @@
     <title>Weekly webdev challenge 36</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link rel="stylesheet" href="css/multirange.css">
+    
+    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
     <!--HEADER START-->
+    
     <header class="header">
         <span class="header__hamburger"></span>
         <img class="header__logo header__logo--first disp-none" src="images/logo.png" alt="logo">
         <img class="header__logo header__logo--second disp-none" src="images/logo.png" alt="logo">
-        <div class="header__hamburger-inside disp-none header__hamburger-close ">
+        <div class="header__hamburger-inside  ">
             <ul>
                 <li><a href="#">home</a></li>
                 <li><a href="#">shop</a></li>
@@ -36,6 +37,8 @@
 
     <!--SLIDER START-->
     <section class="slider">
+       <div class=" slider__side slider__side--left" id="slider-left"></div>
+       <div class=" slider__side slider__side--right" id="slider-right"></div>
         <ion-icon class="disp-none slider__arrow slider__arrow-back" src="svg/_ionicons_svg_ios-arrow-back.svg"></ion-icon>
         <figure class="slider__cont">
             <div class="slider__image"><img id="sliderImage" height="174" src="images/slider_1.png" alt="slider image"></div>
@@ -120,7 +123,7 @@
                     <div class="filter__desktop--tags">
                         <h5 class="filter__desktop--header">Popular tags</h5>
                         <div class="filter__desktop--content">
-                            Simple, Minimalism, Furniture, White, Black, Accessories
+                            <span>Simple</span>, <span>Minimalism</span>, <span>Furniture</span>, <span>White</span>, <span>Black</span>, <span>Accessories</span>
                         </div>
                     </div>
                 </div>
@@ -227,9 +230,10 @@
         </div>
     </footer>
 
-    <!--FOOTER END-->
-    <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+    <!--FOOTER END-->
+        
+    <script src="js/script.min.js"></script>
 
 
 </body>

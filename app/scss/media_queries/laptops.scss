@@ -2,11 +2,9 @@
     html {
         font-size: 62.5%;
     }
-
     .header {
+        z-index: -1;
         background: $second-color;
-        /*rgb(239, 239,239) */
-        //zmienić na innych slaidach 
         align-items: center;
         height: 10rem;
         box-sizing: border-box;
@@ -109,7 +107,7 @@
         width: 40%;
         margin-left: 5vw;
         margin-top: -2rem;
-
+        
         ion-icon {
             display: none;
         }
@@ -162,6 +160,11 @@
             }
 
             &-checkbox {
+                ion-icon{
+                    display: inline-block;
+                    font-size: 2.5rem;
+                    transform: translate(11%, 12%);
+                }
                 width: 3rem;
                 height: 3rem;
             }
@@ -201,7 +204,9 @@
             text-transform: none;
             display: grid;
             transform: translateY(-2rem);
-
+            &--point-active{
+                color: black;
+            }
             &--tags {
                 .filter__desktop--header {
                     font-size: 2.2rem;
@@ -210,6 +215,7 @@
             }
 
             &--brands {
+                cursor: pointer;
                 border-bottom: 1px solid grey;
             }
 
@@ -229,8 +235,11 @@
                 list-style: none;
                 padding: 0;
                 line-height: 2.5rem;
-
+                span{
+                    cursor: pointer;
+                }
                 li {
+                    cursor: pointer;
                     margin: 1.6rem 0;
                 }
             }
@@ -245,10 +254,11 @@
     .offer {
         padding-top: 5rem;
         display: grid;
-        margin-left: 42rem;
+        margin-left: 33vw;
         margin-right: 6rem;
-        grid-template-rows: 1rem repeat(3, 30vw) 9rem;
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 1rem repeat(3, 30rem) 9rem;
+        grid-template-columns: 30rem 30rem;
         grid-gap: 3vw 2vw;
 
 
@@ -260,6 +270,7 @@
             grid-column: 1/3;
             position: relative;
             bottom: 1rem;
+            margin-left: 3.5rem;
             font-family: "MaisonNeueMedium";
             font-size: $desktop-font-size + 0.14vw;
 
@@ -283,7 +294,7 @@
 
         &__item {
             &-image {
-                width: 100%;
+                width: 25rem;
             }
 
             &--double {
@@ -294,10 +305,10 @@
                 background: $second-color;
                 position: relative;
                 padding: 1.5rem 5rem;
-                width: 30vw;
+                margin-top: 4rem;
+                width: 25rem;
                 place-self: center;
                 bottom: 8rem;
-                display: none;
                 box-sizing: border-box;
 
 
@@ -328,17 +339,41 @@
         visibility: hidden;
     }
 
+    .icon__heart{
+        position: absolute;
+        right: unset;
+        margin-left: 7rem;
+        left: unset;
+        font-size: 4rem;
+        top: unset;
+    }
 }
 
-/*
+
+
 
 @media (min-width:1270px){
     .offer{
+
+        margin-left: 35vw;
         grid-row-gap: 2.5vw;
     }
 }
 @media (min-width: 1350px){
     .offer{
+
+        margin-left: 40vw;
         grid-row-gap: 5vw;}
-}*/
+}
+@media (min-width: 1450px){
+    .header__cart{
+        right: 5rem;
+    }
+    .offer{
+
+        margin-left: 46vw;
+        grid-gap: 4vw;
+        
+    }
+}
 

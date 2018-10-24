@@ -35,6 +35,8 @@
             width: 100vw;
             font-size: $font-size;
             position: absolute;
+
+            position: fixed;
             background: white;
             border: 3px solid black;
             border-left: none;
