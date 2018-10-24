@@ -43,7 +43,10 @@ filterEl.addEventListener("click", e => {
 document.getElementsByClassName("filter__menu").item(0).addEventListener("click", () => {
     event.stopPropagation()
 })
+<<<<<<< HEAD
 
+=======
+>>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
 
 
 
@@ -311,18 +314,31 @@ document.getElementById("slider-left").addEventListener("click", () => {
 })
 // brand 
 for (let i = 0; i < document.querySelectorAll(".filter__desktop--content li").length; i++) {
+<<<<<<< HEAD
     document.querySelectorAll(".filter__desktop--content li")[i].addEventListener("click", function () {
         for (let x = 0; x < document.querySelectorAll(".filter__desktop--content li").length; x++) {
 
             document.querySelectorAll(".filter__desktop--content li")[x].classList.remove("filter__desktop--point-active");
 
+=======
+    document.querySelectorAll(".filter__desktop--content li")[i].addEventListener("click",function(){
+        for(let x = 0; x < document.querySelectorAll(".filter__desktop--content li").length; x++){
+            
+            document.querySelectorAll(".filter__desktop--content li")[x].classList.remove("filter__desktop--point-active");
+            
+>>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
         }
         this.classList.add("filter__desktop--point-active");
     })
 }
 for (let i = 0; i < document.querySelectorAll(".filter__desktop--content span").length; i++) {
+<<<<<<< HEAD
     document.querySelectorAll(".filter__desktop--content span")[i].addEventListener("click", function () {
         for (let x = 0; x < document.querySelectorAll(".filter__desktop--content span").length; x++) {
+=======
+    document.querySelectorAll(".filter__desktop--content span")[i].addEventListener("click",function(){
+        for(let x = 0; x < document.querySelectorAll(".filter__desktop--content span").length; x++){
+>>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
 
             document.querySelectorAll(".filter__desktop--content span")[x].classList.remove("filter__desktop--point-active");
 

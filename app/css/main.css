@@ -16,6 +16,39 @@
   font-family: MaisonNeueMono;
   src: url("../fonts/MaisonNeue-Mono.ttf") format("truetype"); }
 
+<<<<<<< HEAD
+=======
+@keyframes hamburger-open {
+  0% {
+    transform: translate(-100%, 0); }
+  100% {
+    transform: translate(0%, 0); } }
+
+@keyframes hamburger-close {
+  from {
+    transform: translate(0%, 0); }
+  to {
+    opacity: 0;
+    transform: translate(-100%, 0); } }
+
+@keyframes sliderAnimationLeft {
+  from {
+    transform: translateX(50%); }
+  to {
+    transform: translateX(100%); } }
+
+@keyframes sliderAnimationFadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.sliderAnimationFadeOut {
+  animation-name: sliderAnimationFadeOut;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in; }
+
+>>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
 .header {
   background: white;
   z-index: 2;
@@ -794,6 +827,7 @@
     margin-left: 46vw;
     grid-gap: 4vw; } }
 
+<<<<<<< HEAD
 @keyframes hamburger-open {
   0% {
     transform: translateY(-100%); }
@@ -827,6 +861,8 @@
   animation-duration: 0.6s;
   animation-timing-function: ease-in; }
 
+=======
+>>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
 body {
   color: #232323;
   margin: 0; }
