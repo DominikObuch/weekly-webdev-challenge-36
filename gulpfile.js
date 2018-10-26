@@ -39,7 +39,7 @@ gulp.task('scss-lint', function() {
 
 gulp.task('fonts', () => {
   return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('docs/fonts'))
 })
 
 gulp.task('watch', ['browserSync', 'sass'], () => {
@@ -50,18 +50,18 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
 
 gulp.task('images', () => {
     return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('docs/images'))
 });
 gulp.task('svg', ()=>{
     return gulp.src('app/svg/**/*.svg')
-    .pipe(gulp.dest('dist/svg'))
+    .pipe(gulp.dest('docs/svg'))
 });
 
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
 });
 
 gulp.task('scripts', () => {
@@ -75,11 +75,11 @@ gulp.task('scripts', () => {
   .on('error', function (err) {
      gutil.log(gutil.colors.red('[Error]'), err.toString());
    })
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest('docs/js'));
 })
 
-gulp.task('clean:dist', () => {
-  return del.sync('dist');
+gulp.task('clean:docs', () => {
+  return del.sync('docs');
 })
 
 gulp.task('default', function (callback) {
@@ -89,6 +89,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', ['default', 'fonts', 'images', 'svg'], 'useref', 'scripts',
+  runSequence('clean:docs', ['default', 'fonts', 'images', 'svg'], 'useref', 'scripts',
     callback)
 })
