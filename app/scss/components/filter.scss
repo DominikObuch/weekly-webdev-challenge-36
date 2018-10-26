@@ -17,7 +17,7 @@
      }
 
      &__menu {
-         margin-top: 4rem;
+         margin-top: 6.4rem;
          z-index: 1;
          width: 100vw;
          display: flex;
@@ -62,7 +62,7 @@
      left: 0;
      position: absolute;
      margin-top: 4rem;
-     width: 74%;
+     width: 100vw;
      grid-template-rows: 8rem 13rem 8rem 15rem 5rem;
      grid-template-columns: 100%;
      display: grid;

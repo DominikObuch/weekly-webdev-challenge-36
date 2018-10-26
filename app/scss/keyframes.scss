@@ -23,31 +23,116 @@
 
     }
 }
-.header__hamburger-close{
-    
+
+.header__hamburger-close {
+
     animation-name: hamburger-close;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    
+
 }
-<<<<<<< HEAD
-.header__hamburger-open{
+
+.header__hamburger-open {
     animation-name: hamburger-open;
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
-=======
 
->>>>>>> 55b6f20aa09fac366eab564d5efaf7c98888e76f
+
 @keyframes sliderAnimationFadeOut {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
 }
+
 .sliderAnimationFadeOut {
     animation-name: sliderAnimationFadeOut;
     animation-duration: 0.6s;
     animation-timing-function: ease-in;
+}
+
+@keyframes filterAnimationOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes filterAnimationIn {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.filter__menu--out {
+    animation-name: filterAnimationOut;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+
+.filter__menu--in {
+    animation-name: filterAnimationIn;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@keyframes categoriesAnimationOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes categoriesAnimationIn {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.categories__menu--out {
+    animation-name: categoriesAnimationOut;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+
+}
+
+.categories__menu--in {
+    animation-name: categoriesAnimationIn;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@media (min-width: 1024px) {
+
+    .categories__menu--in, .categories__menu--out, .filter__menu--in, .filter__menu--out {
+        animation: none;
+    
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .categories__menu{
+        margin: 60px 0;
+        width: 100%;
+    }
+    .filter__menu{
+        margin: 60px 43%;
+    }
+
 }

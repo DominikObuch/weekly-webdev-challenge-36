@@ -6,13 +6,11 @@
     grid-template-columns: 20fr 60fr 20fr;
     grid-template-rows: 8rem;
     &__cart {
-        place-self: center;
+        place-self:center;
         position: absolute;
         top: 20px;
         right: 6vw;
         &-numb {
-            &-box {
-            }
             top: 65%;
             right: -0.5vw;
             position: absolute;
@@ -35,8 +33,6 @@
             width: 100vw;
             font-size: $font-size;
             position: absolute;
-
-            position: fixed;
             background: white;
             border: 3px solid black;
             border-left: none;
